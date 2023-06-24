@@ -19,6 +19,7 @@ private:
 public:
 //specials
     Servidor();
+    //Servidor(int usuarioDonoId, std::string nome);
     Servidor(int usuarioDonoId, std::string nome, std::string descricao, std::string codigoConvite);
     ~Servidor();
 

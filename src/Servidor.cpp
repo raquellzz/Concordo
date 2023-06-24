@@ -11,6 +11,7 @@ Servidor::Servidor(){
     this->codigoConvite = "";
 }
 
+
 Servidor::Servidor(int usuarioDonoId, std::string nome, std::string descricao, std::string codigoConvite){
     this->usuarioDonoId = usuarioDonoId;
     this->nome = nome;

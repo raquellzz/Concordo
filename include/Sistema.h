@@ -13,11 +13,12 @@ class Sistema{
 private:
     std::vector<Usuario> usuarios;
     std::vector<Servidor> servidores;
-    int usuarioLogadoId;
+    int usuarioLogadoId = -1;
     std::string servidorAtual;
     std::string canalAtual;
     int *id = 0;
 public:
+    std::string verify_login(int usuarioLogadoId);
     std::string quit();
     std::string create_user (int *id, std::string email, std::string senha, std::string nome);
     std::string login (std::string email, std::string senha);
@@ -26,6 +27,10 @@ public:
     std::string set_server_desc (std::string nome, std::string descricao);
     std::string set_server_invite_code (std::string nome, std::string codigo);
     std::string list_servers();
+    std::string remove_server (std::string nome);
+    std::string enter_server (std::string nome, std::string codigo);
+    std::string leave_server();
+    std::string list_participants();
 };
 
 #endif
