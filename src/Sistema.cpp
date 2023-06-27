@@ -143,6 +143,7 @@ std::string Sistema::enter_server(std::string nome, std::string codigo){
         if (servidores[i].getNome() == nome){
             if (servidores[i].getCodigoConvite() == codigo){
                 servidorAtual = nome;
+                servidores[i].addParticipantesIDs(usuarioLogadoId);
                 return "Entrou no servidor com sucesso!";
             }
             else{

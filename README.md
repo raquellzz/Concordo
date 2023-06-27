@@ -24,14 +24,20 @@ create-user marc@gmail senha1234
 >
 create-user raquel@gmail senha123 raquel freire
 >
+create-user marc@gmail senha1234 Marcos B
+>
 login raquel@gmail senhaErrada
 >
 login raquel@gmail senha123
 >
 create-server deus
 >
-set-server-disc gracas
+set-server-desc deus amem
 >
+set-server-invite-code deus bora
+>
+disconnect
+login marc@gmail senha1234
 quit
 >
 ```

@@ -19,7 +19,6 @@ private:
 public:
 //specials
     Servidor();
-    //Servidor(int usuarioDonoId, std::string nome);
     Servidor(int usuarioDonoId, std::string nome, std::string descricao, std::string codigoConvite);
     ~Servidor();
 
@@ -39,6 +38,7 @@ public:
     void setCodigoConvite(std::string codigoConvite);
     void setCanais(std::vector<Canal> canais);
     void setParticipantesIDs(std::vector<int> participantesIDs);
+    void addParticipantesIDs(int participanteID);
 
 };
 
