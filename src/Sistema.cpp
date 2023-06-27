@@ -1,24 +1,57 @@
+/**
+ * @file Sistema.cpp
+ * 
+ * @brief Implementação dos métodos da classe Sistema.
+ * 
+ */
+
 #include "Sistema.h"
 #include <iostream>
 #include "Usuario.h"
 #include <vector>
 
+
+/**
+ * @brief Função para aumentar o último id
+ * 
+ */
 void Sistema::increaseId(){
     id++;
 }
 
+/**
+ * @brief Função que retorna o último id
+ * 
+ * @return int 
+ */
 int Sistema::getId(){
     return id;
 }
 
+/**
+ * @brief Função que retorna a quantidade de usuários cadastrados
+ * 
+ * @return int 
+ */
 int Sistema::getusuarios(){
     return usuarios.size();
 }
 
+/**
+ * @brief Função que retorna a quantidade de servidores criados
+ * 
+ * @return int 
+ */
 int Sistema::getServidores(){
     return servidores.size();
 }
 
+/**
+ * @brief Função que verifica se há um usuário logado
+ * 
+ * @param usuarioLogadoId 
+ * @return std::string 
+ */
 std::string Sistema::verify_login(int usuarioLogadoId){
     if (usuarioLogadoId == -1){
         return "Nenhum usuário logado!";
@@ -26,10 +59,23 @@ std::string Sistema::verify_login(int usuarioLogadoId){
     return "";
 }
 
+/**
+ * @brief Função que representa o comando para sair do sistema
+ * 
+ * @return std::string 
+ */
 std::string Sistema::quit(){
     return "Saindo do Concordo...";
 }
 
+/**
+ * @brief Função que representa o comando para criar usuário
+ * 
+ * @param email 
+ * @param senha 
+ * @param nome 
+ * @return std::string 
+ */
 std::string Sistema::create_user (const std::string email, const std::string senha, const std::string nome){
     verify_login(usuarioLogadoId);
     if(email == "" || senha == "" || nome == ""){
@@ -44,10 +90,16 @@ std::string Sistema::create_user (const std::string email, const std::string sen
     increaseId();
     Usuario novoUsuario(id, email, senha, nome);
     usuarios.push_back(novoUsuario);
-    std::cout << usuarios[0].getNome() << "\n";
     return "Usuário criado com sucesso!";
 }
 
+/**
+ * @brief Função que representa o comando para fazer login no sistema
+ * 
+ * @param email 
+ * @param senha 
+ * @return std::string 
+ */
 std::string Sistema::login (std::string email, std::string senha){
     if(usuarioLogadoId != -1){
         return "Usuário já está logado!";
@@ -66,11 +118,22 @@ std::string Sistema::login (std::string email, std::string senha){
     return "Usuário não encontrado!";
 }
 
+/**
+ * @brief Função que representa o comando para desconectar o usuário do sistema
+ * 
+ * @return std::string 
+ */
 std::string Sistema::disconnect(){
     usuarioLogadoId = -1;
     return "Desconectado com sucesso!";
 }
 
+/**
+ * @brief Função que representa o comando para criar um servidor
+ * 
+ * @param nome 
+ * @return std::string 
+ */
 std::string Sistema::create_server (std::string nome){
     verify_login(usuarioLogadoId);
     for (int i = 0; i < getServidores(); i++){
@@ -81,9 +144,18 @@ std::string Sistema::create_server (std::string nome){
     Servidor novoServidor(usuarioLogadoId, nome, "", "");
     
     servidores.push_back(novoServidor);
+    servidores[getServidores()-1].addParticipantesIDs(usuarioLogadoId);
+    servidorAtual = novoServidor.getNome();
     return "Servidor criado com sucesso!";
 }
 
+/**
+ * @brief Função que representa o comando para definir a descrição de um servidor
+ * 
+ * @param nome 
+ * @param descricao 
+ * @return std::string 
+ */
 std::string Sistema::set_server_desc(std::string nome, std::string descricao){
     verify_login(usuarioLogadoId);
     for (int i = 0; i < getServidores(); i++){
@@ -98,6 +170,13 @@ std::string Sistema::set_server_desc(std::string nome, std::string descricao){
     return "Servidor não encontrado!";
 }
 
+/**
+ * @brief Função que representa o comando para definir o código de convite de um servidor
+ * 
+ * @param nome 
+ * @param codigo 
+ * @return std::string 
+ */
 std::string Sistema::set_server_invite_code(std::string nome, std::string codigo){
     verify_login(usuarioLogadoId);
     for (int i = 0; i < getServidores(); i++){
@@ -112,6 +191,11 @@ std::string Sistema::set_server_invite_code(std::string nome, std::string codigo
     return "Servidor não encontrado!";
 }
 
+/**
+ * @brief Função que representa o comando para listar os servidores existentes no sistema
+ * 
+ * @return std::string 
+ */
 std::string Sistema::list_servers(){
     verify_login(usuarioLogadoId);
     std::string lista = "";
@@ -121,12 +205,19 @@ std::string Sistema::list_servers(){
     return lista;
 }
 
+/**
+ * @brief Função que representa o comando para remover um servidor do sistema
+ * 
+ * @param nome 
+ * @return std::string 
+ */
 std::string Sistema::remove_server(std::string nome){
     verify_login(usuarioLogadoId);
     for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == nome){
             if (servidores[i].getDonoID() == usuarioLogadoId){
                 servidores.erase(servidores.begin() + i);
+                servidorAtual = "";
                 return "Servidor removido com sucesso!";
             }
             else{
@@ -137,6 +228,13 @@ std::string Sistema::remove_server(std::string nome){
     return "Servidor não encontrado!";
 }
 
+/**
+ * @brief Função que representa o comando para entrar em um servidor existente
+ * 
+ * @param nome 
+ * @param codigo 
+ * @return std::string 
+ */
 std::string Sistema::enter_server(std::string nome, std::string codigo){
     verify_login(usuarioLogadoId);
     for (int i = 0; i < getServidores(); i++){
@@ -154,12 +252,22 @@ std::string Sistema::enter_server(std::string nome, std::string codigo){
     return "Servidor não encontrado!";
 }
 
+/**
+ * @brief Função que representa o comando para deslogar de um servidor
+ * 
+ * @return std::string 
+ */
 std::string Sistema::leave_server(){
     verify_login(usuarioLogadoId);
     servidorAtual = "";
     return "Saindo do servidor...";
 }
 
+/**
+ * @brief Função que representa o comando para listar os participantes do servidor atual
+ * 
+ * @return std::string 
+ */
 std::string Sistema::list_participants(){
     verify_login(usuarioLogadoId);
     for (int i = 0; i < getServidores(); i++){
@@ -168,8 +276,10 @@ std::string Sistema::list_participants(){
             for (int j = 0; j < servidores[i].getparticpantes(); j++){
                 for(int k = 0; k < getusuarios(); k++){
                     if(usuarios[k].getId() == servidores[i].getParticipantesIDs()[j]){
-                        lista += usuarios[k].getNome() + "\n";
+                        if(k != getusuarios() - 1)
+                            lista += usuarios[k].getNome() + "\n";
                     }
+                    lista += usuarios[k].getNome();
                 }
             }
             if(lista != "")

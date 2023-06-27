@@ -1,3 +1,11 @@
+/**
+ * @file Executor.h
+ * 
+ * @brief Classe que executa as funções do sistema.
+ * 
+ * 
+ */
+
 #ifndef EXECUTOR_H
 #define EXECUTOR_H
 
@@ -10,9 +18,9 @@
 
 class Executor{
 private:
-    Sistema *sistema;
+    Sistema *sistema; //!< Cria o sistema que será utiliazdo na compilação
     
-    bool sair = false;
+    bool sair = false; //!< Variável booleana para verificar se o sistema deve fechar ou não
 
 public:
     Executor(Sistema *sistema);

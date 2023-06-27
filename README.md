@@ -37,7 +37,9 @@ set-server-desc deus amem
 set-server-invite-code deus bora
 >
 disconnect
+>
 login marc@gmail senha1234
+>
 quit
 >
 ```

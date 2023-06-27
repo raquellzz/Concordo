@@ -69,19 +69,19 @@ include CMakeFiles/Concordo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Concordo.dir/flags.make
 
-CMakeFiles/Concordo.dir/src/main.cpp.o: CMakeFiles/Concordo.dir/flags.make
-CMakeFiles/Concordo.dir/src/main.cpp.o: ../src/main.cpp
-CMakeFiles/Concordo.dir/src/main.cpp.o: CMakeFiles/Concordo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levingu/Documentos/Concordo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Concordo.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Concordo.dir/src/main.cpp.o -MF CMakeFiles/Concordo.dir/src/main.cpp.o.d -o CMakeFiles/Concordo.dir/src/main.cpp.o -c /home/levingu/Documentos/Concordo/src/main.cpp
+CMakeFiles/Concordo.dir/src/Concordo.cpp.o: CMakeFiles/Concordo.dir/flags.make
+CMakeFiles/Concordo.dir/src/Concordo.cpp.o: ../src/Concordo.cpp
+CMakeFiles/Concordo.dir/src/Concordo.cpp.o: CMakeFiles/Concordo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/levingu/Documentos/Concordo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Concordo.dir/src/Concordo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Concordo.dir/src/Concordo.cpp.o -MF CMakeFiles/Concordo.dir/src/Concordo.cpp.o.d -o CMakeFiles/Concordo.dir/src/Concordo.cpp.o -c /home/levingu/Documentos/Concordo/src/Concordo.cpp
 
-CMakeFiles/Concordo.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Concordo.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/levingu/Documentos/Concordo/src/main.cpp > CMakeFiles/Concordo.dir/src/main.cpp.i
+CMakeFiles/Concordo.dir/src/Concordo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Concordo.dir/src/Concordo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/levingu/Documentos/Concordo/src/Concordo.cpp > CMakeFiles/Concordo.dir/src/Concordo.cpp.i
 
-CMakeFiles/Concordo.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Concordo.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/levingu/Documentos/Concordo/src/main.cpp -o CMakeFiles/Concordo.dir/src/main.cpp.s
+CMakeFiles/Concordo.dir/src/Concordo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Concordo.dir/src/Concordo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/levingu/Documentos/Concordo/src/Concordo.cpp -o CMakeFiles/Concordo.dir/src/Concordo.cpp.s
 
 CMakeFiles/Concordo.dir/src/Usuario.cpp.o: CMakeFiles/Concordo.dir/flags.make
 CMakeFiles/Concordo.dir/src/Usuario.cpp.o: ../src/Usuario.cpp
@@ -197,7 +197,7 @@ CMakeFiles/Concordo.dir/src/Canal.cpp.s: cmake_force
 
 # Object files for target Concordo
 Concordo_OBJECTS = \
-"CMakeFiles/Concordo.dir/src/main.cpp.o" \
+"CMakeFiles/Concordo.dir/src/Concordo.cpp.o" \
 "CMakeFiles/Concordo.dir/src/Usuario.cpp.o" \
 "CMakeFiles/Concordo.dir/src/Sistema.cpp.o" \
 "CMakeFiles/Concordo.dir/src/Servidor.cpp.o" \
@@ -210,7 +210,7 @@ Concordo_OBJECTS = \
 # External object files for target Concordo
 Concordo_EXTERNAL_OBJECTS =
 
-Concordo: CMakeFiles/Concordo.dir/src/main.cpp.o
+Concordo: CMakeFiles/Concordo.dir/src/Concordo.cpp.o
 Concordo: CMakeFiles/Concordo.dir/src/Usuario.cpp.o
 Concordo: CMakeFiles/Concordo.dir/src/Sistema.cpp.o
 Concordo: CMakeFiles/Concordo.dir/src/Servidor.cpp.o

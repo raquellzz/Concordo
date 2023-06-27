@@ -1,3 +1,13 @@
+/**
+ * @file Servidor.h
+ * 
+ * @brief Classe que representa um servidor do sistema.
+ * 
+ * @details A classe servidor é responsável por armazenar as informações de um servidor, como seu nome, descrição, código, canais, id do dono e ids dos participantes.
+ * 
+ * 
+ */
+
 #ifndef SERVIDOR_H
 #define SERVIDOR_H
 
@@ -7,20 +17,20 @@
 #include "Canal.h"
 
 
+
 class Servidor{
 private:
     int usuarioDonoId;
-    std::string nome;
-    std::string descricao;
-    std::string codigoConvite; //codigo para entrar no servidor
+    std::string nome; //!< Armazena o nome do servidor
+    std::string descricao; //!< Armazena a descrição do servidor
+    std::string codigoConvite; //!< Armazena o código necessário para entrar no servidor
 
-    std::vector<Canal> canais;
-    std::vector<int> participantesIDs; //lista de usuarios que já estão no servidor
+    std::vector<Canal> canais; //!< Armazena os canais cadastrados no servidor
+    std::vector<int> participantesIDs; //!< Lista de usuarios que já estão no servidor
 public:
 //specials
     Servidor();
     Servidor(int usuarioDonoId, std::string nome, std::string descricao, std::string codigoConvite);
-    ~Servidor();
 
 //gets
     int getparticpantes();

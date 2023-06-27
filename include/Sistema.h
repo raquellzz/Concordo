@@ -1,3 +1,11 @@
+/**
+ * @file Sistema.h
+ * 
+ * @brief Classe que representa o sistema.
+ * 
+ * 
+ */
+
 #ifndef SISTEMA_H
 #define SISTEMA_H
 
@@ -9,15 +17,17 @@
 #include "Mensagem.h"
 #include "Servidor.h"
 
+
+
 class Sistema{
 private:
-    std::vector<Usuario> usuarios;
-    std::vector<std::string>emails;
-    std::vector<Servidor> servidores;
-    int usuarioLogadoId = -1;
-    std::string servidorAtual;
-    std::string canalAtual;
-    int id = 0;
+    std::vector<Usuario> usuarios; //!< Armazena todos os ususários cadastrados
+    std::vector<std::string>emails; //!< Armazena todos os emails cadastrados
+    std::vector<Servidor> servidores; //!< Armazena todos os servidores cadastrados
+    int usuarioLogadoId = -1; //!< Armazena o id do usuário logado no sistema
+    std::string servidorAtual;  //!< Armazena o nome do servidor em que o usuário está
+    std::string canalAtual; //!< Armazena o nome do servidor em que o usuário está
+    int id = 0; //!< Armazena o valor do último id gerado no sistema
 public:
     void increaseId();
     int getId();

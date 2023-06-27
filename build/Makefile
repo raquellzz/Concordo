@@ -201,6 +201,30 @@ src/CanalVoz.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/CanalVoz.cpp.s
 .PHONY : src/CanalVoz.cpp.s
 
+src/Concordo.o: src/Concordo.cpp.o
+.PHONY : src/Concordo.o
+
+# target to build an object file
+src/Concordo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/Concordo.cpp.o
+.PHONY : src/Concordo.cpp.o
+
+src/Concordo.i: src/Concordo.cpp.i
+.PHONY : src/Concordo.i
+
+# target to preprocess a source file
+src/Concordo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/Concordo.cpp.i
+.PHONY : src/Concordo.cpp.i
+
+src/Concordo.s: src/Concordo.cpp.s
+.PHONY : src/Concordo.s
+
+# target to generate assembly for a file
+src/Concordo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/Concordo.cpp.s
+.PHONY : src/Concordo.cpp.s
+
 src/Executor.o: src/Executor.cpp.o
 .PHONY : src/Executor.o
 
@@ -321,30 +345,6 @@ src/Usuario.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/Usuario.cpp.s
 .PHONY : src/Usuario.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Concordo.dir/build.make CMakeFiles/Concordo.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -363,6 +363,9 @@ help:
 	@echo "... src/CanalVoz.o"
 	@echo "... src/CanalVoz.i"
 	@echo "... src/CanalVoz.s"
+	@echo "... src/Concordo.o"
+	@echo "... src/Concordo.i"
+	@echo "... src/Concordo.s"
 	@echo "... src/Executor.o"
 	@echo "... src/Executor.i"
 	@echo "... src/Executor.s"
@@ -378,9 +381,6 @@ help:
 	@echo "... src/Usuario.o"
 	@echo "... src/Usuario.i"
 	@echo "... src/Usuario.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 

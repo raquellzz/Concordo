@@ -1,13 +1,29 @@
+/**
+ * @file Executor.cpp
+ * 
+ * @brief Implementação dos métodos da classe Executor.
+ * 
+ */
+
 #include <string>
 #include <iostream>
 #include <vector>
 #include "Executor.h"
 
+/**
+ * @brief Construtor de um executor
+ * 
+ * @param sistema 
+ */
 Executor::Executor(Sistema *sistema){
     this->sistema = sistema;
     this->sair = false;
 }
 
+/**
+ * @brief Função que inicia a execução do programa
+ * 
+ */
 void Executor::iniciar(){
     while(this->sair != true){
         std::string linha;
@@ -16,7 +32,13 @@ void Executor::iniciar(){
     }
 }
 
-
+/**
+ * @brief Função capaz de entender as linhas de comando
+ * 
+ * @param linha 
+ * @param sistema 
+ * @return std::string 
+ */
 std::string Executor::LeituraComandos(std::string linha, Sistema *sistema){
     std::string comando;
     for(auto c: linha){

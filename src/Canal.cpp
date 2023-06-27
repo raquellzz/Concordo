@@ -10,9 +10,6 @@ Canal::Canal(std::string nome) {
     this->nome = nome;
 }
 
-//destrutor
-Canal::~Canal() {
-}
 
 //função que retorna o nome do canal
 std::string Canal::getNome() {

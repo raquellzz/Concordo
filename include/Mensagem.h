@@ -1,3 +1,10 @@
+/**
+ * @file Mensagem.h
+ * 
+ * @brief Classe que representa as mensagens enviadas no sistema.
+ * 
+ */
+
 #ifndef MENSAGEM_H
 #define MENSAGEM_H
 
@@ -6,14 +13,13 @@
 
 class Mensagem{
 private:
-    int enviadaPor;
-    std::string dataHora;
-    std::string conteudo;
+    int enviadaPor; //!< Armazena o id de quem enviou a mensagem
+    std::string dataHora; //!< Armazena a data e o horário em que a mensagem foi enviada
+    std::string conteudo; //!< Armazena o conteúdo da mensagem
 public:
 //specials
     Mensagem();
     Mensagem(int enviadaPor, std::string dataHora, std::string conteudo);
-    ~Mensagem();
 
 //gets
     int getEnviadaPor();

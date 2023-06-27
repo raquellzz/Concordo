@@ -1,3 +1,10 @@
+/**
+ * @file Canal.h
+ * 
+ * @brief Classe que representa um canal de um servidor
+ * 
+ */
+
 #ifndef CANAL_H
 #define CANAL_H
 
@@ -6,12 +13,11 @@
 
 class Canal{
     public:
-    std::string nome;
+    std::string nome; //!< Armazena o nome do canal
 
     //specials
     Canal();
     Canal(std::string nome);
-    ~Canal();
 
     //gets
     std::string getNome();

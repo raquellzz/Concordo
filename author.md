@@ -8,12 +8,13 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 
 # Indique quais recursos abaixo foram implementados no Concordo
 
+
 ## Funcionalidades (parte 1)
 
 **A1 - Se não estiver logado**
 - [x] Sair do sistemas
 - [x] Criar usuário
-- [x] ENtrar no sistema
+- [x] Entrar no sistema
 
 **A2 - Interações básicas com Servidores**
 - [x] Desconectar do Concordo
@@ -38,6 +39,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 **B2 - Gestão de mensagens**
 - [] Enviar mensagem para o canal
 - [] Visualizar mensagens do canal
+
 
 ## Funcionalidades (parte 3)
 

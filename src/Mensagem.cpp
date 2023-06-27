@@ -1,52 +1,87 @@
+/**
+ * @file Mensagem.cpp
+ * 
+ * @brief Implementação dos métodos da classe Mensagem.
+ * 
+ */
+
 #include "Mensagem.h"
 #include <iostream>
 
 
-//construtor vazio
+/**
+ * @brief Construtor vazio de uma mensagem
+ * 
+ */
 Mensagem::Mensagem() {
     this->enviadaPor = 0;
     this->dataHora = "";
     this->conteudo = "";
 }
 
-//construtor com atributos
+/**
+ * @brief Construtor com atributos de uma mensagem
+ * 
+ * @param enviadaPor 
+ * @param dataHora 
+ * @param conteudo 
+ */
 Mensagem::Mensagem(int enviadaPor, std::string dataHora, std::string conteudo) {
     this->enviadaPor = enviadaPor;
     this->dataHora = dataHora;
     this->conteudo = conteudo;
 }
 
-
-//destrutor
-Mensagem::~Mensagem() {
-}
-
-//função que retorna o id do usuário que enviou a mensagem
+/**
+ * @brief Função que retorna o id do usuário que enviou a mensagem
+ * 
+ * @return int 
+ */
 int Mensagem::getEnviadaPor() {
     return this->enviadaPor;
 }
 
-//função que retorna a data e hora da mensagem enviada
+/**
+ * @brief Função que retorna a data e hora da mensagem enviada
+ * 
+ * @return std::string 
+ */
 std::string Mensagem::getDataHora() {
     return this->dataHora;
 }
 
-//função que retorna o conteúdo da mensagem enviada
+/**
+ * @brief Função que retorna o conteúdo da mensagem enviada
+ * 
+ * @return std::string 
+ */
 std::string Mensagem::getConteudo() {
     return this->conteudo;
 }
 
-//função que define o id do usuário que enviou a mensagem
+/**
+ * @brief Função que define o id do usuário que enviou a mensagem
+ * 
+ * @param enviadaPor 
+ */
 void Mensagem::setEnviadaPor(int enviadaPor) {
     this->enviadaPor = enviadaPor;
 }
 
-//função que define a data e hora da mensagem enviada
+/**
+ * @brief Função que define a data e hora da mensagem enviada
+ * 
+ * @param dataHora 
+ */
 void Mensagem::setDataHora(std::string dataHora) {
     this->dataHora = dataHora;
 }
 
-//função que define o conteúdo da mensagem enviada
+/**
+ * @brief Função que define o conteúdo da mensagem enviada
+ * 
+ * @param conteudo 
+ */
 void Mensagem::setConteudo(std::string conteudo) {
     this->conteudo = conteudo;
 }

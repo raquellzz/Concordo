@@ -7,7 +7,7 @@ include_directories( include )
 
 
 add_executable( Concordo
-                src/main.cpp
+                src/Concordo.cpp
                 src/Usuario.cpp
                 src/Sistema.cpp
                 src/Servidor.cpp

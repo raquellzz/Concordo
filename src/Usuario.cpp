@@ -1,7 +1,18 @@
+/**
+ * @file Usuario.cpp
+ * @brief Implementação dos métodos da classe Usuário.
+ * 
+ */
+
 #include "Usuario.h"
 #include <iostream>
 
-//construtor vazio
+
+
+/**
+ * @brief Construtor de usuário vazio
+ * 
+ */
 Usuario::Usuario(){
     this->id = 0;
     this->nome = "";
@@ -9,7 +20,14 @@ Usuario::Usuario(){
     this->senha = "";
 }
 
-//construtor com atributos
+/**
+ * @brief Construtor de usuário com atributos
+ * 
+ * @param id 
+ * @param email 
+ * @param senha 
+ * @param nome 
+ */
 Usuario::Usuario(int id, std::string email, std::string senha, std::string nome){
     this->nome = nome;
     this->email = email;
@@ -21,42 +39,75 @@ Usuario::~Usuario(){
     
 }
 
-//função que retorna o id do usuário
+/**
+ * @brief Função que retorna o id do usuário
+ * 
+ * @return int 
+ */
 int Usuario::getId(){
     return this->id;
 }
 
-//função que retorna o nome do usuário
+/**
+ * @brief Função que retorna o nome do usuário
+ * 
+ * @return std::string 
+ */
 std::string Usuario::getNome(){
     return this->nome;
 }
 
-//função que retorna o email do usuário
+/**
+ * @brief Função que retorna o email do usuário
+ * 
+ * @return std::string 
+ */
 std::string Usuario::getEmail(){
     return this->email;
 }
 
-//função que retorna a senha do usuário
+/**
+ * @brief Função que retorna a senha do usuário
+ * 
+ * @return std::string 
+ */
 std::string Usuario::getSenha(){
     return this->senha;
 }
 
-//função que define o id do usuário
+/**
+ * @brief Função que define o id do usuário
+ * 
+ * @param id 
+ */
 void Usuario::setId(int id){
     this->id = id;
 }
 
-//função que define o nome do usuário
+/**
+ * @brief Função que define o nome do usuário
+ * 
+ * @param nome 
+ */
 void Usuario::setNome(std::string nome){
     this->nome = nome;
 }
 
-//função que define o email do usuário
+/**
+ * @brief Função que define o email do usuário
+ * 
+ * @param email 
+ */
 void Usuario::setEmail(std::string email){
     this->email = email;
 }
 
-//função que define a senha do usuário
+
+/**
+ * @brief Função que define a senha do usuário
+ * 
+ * @param senha 
+ */
 void Usuario::setSenha(std::string senha){
     this->senha = senha;
 }
