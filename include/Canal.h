@@ -1,7 +1,7 @@
 /**
  * @file Canal.h
  * 
- * @brief Classe que representa um canal de um servidor
+ * @brief Definição da classe Canal.
  * 
  */
 
@@ -11,6 +11,10 @@
 #include <string>
 #include <iostream>
 
+/**
+ * @brief Classe que representa um canal de um servidor
+ * 
+ */
 class Canal{
     public:
     std::string nome; //!< Armazena o nome do canal

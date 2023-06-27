@@ -1,7 +1,7 @@
 /**
  * @file Sistema.h
  * 
- * @brief Classe que representa o sistema.
+ * @brief Definição da classe Sistema.
  * 
  * 
  */
@@ -18,7 +18,10 @@
 #include "Servidor.h"
 
 
-
+/**
+ * @brief Classe que representa o sistema.
+ * 
+ */
 class Sistema{
 private:
     std::vector<Usuario> usuarios; //!< Armazena todos os ususários cadastrados

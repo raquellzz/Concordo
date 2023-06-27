@@ -1,0 +1,300 @@
+\hypertarget{classServidor}{}\doxysection{Referência da Classe Servidor}
+\label{classServidor}\index{Servidor@{Servidor}}
+
+
+Classe que representa um servidor do sistema.  
+
+
+
+
+{\ttfamily \#include $<$Servidor.\+h$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServidor_a6be6f59fd470098d8d79bfa22c378b81}\label{classServidor_a6be6f59fd470098d8d79bfa22c378b81}} 
+\mbox{\hyperlink{classServidor_a6be6f59fd470098d8d79bfa22c378b81}{Servidor}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio de servidor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServidor_a351e4e2f88fc744ca61e3d2c58534b06}{Servidor}} (int usuario\+Dono\+Id, std\+::string \mbox{\hyperlink{classServidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}, std\+::string \mbox{\hyperlink{classServidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}}, std\+::string \mbox{\hyperlink{classServidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{codigo\+Convite}})
+\begin{DoxyCompactList}\small\item\em Construtor com atributos de servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServidor_abc78d331b71facbcda20065f8dcca37e}{getparticpantes}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de participantes em um servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServidor_ac9bd9b0e9ec6a1cf884f8b0ba36e76b8}{get\+Dono\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Função que o id do dono de um servidor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServidor_af094e7503c4fd8e124679f03eae3f0cd}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o nome do servidor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServidor_a7862d3dc42a161feb7500d8caf7fe25d}{get\+Descricao}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a descrição de um servidor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServidor_a246c9e826a657e9448cac0ed85206f30}{get\+Codigo\+Convite}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o código de convite de um servidor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$ \mbox{\hyperlink{classServidor_a2a661d4516c7318f26bef56354f65f1c}{get\+Canais}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna os canais de um servidor. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classServidor_a5583662547b3e58683dd4382bb2276c0}{get\+Participantes\+IDs}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna os ids dos participantes de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a6ae819312dc3bd799002f92f64fb3b69}{set\+Dono\+ID}} (int usuario\+Dono\+Id)
+\begin{DoxyCompactList}\small\item\em Função que define o id do dono do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a655bd4dc2936b5a5fb57d29765d28ebc}{set\+Nome}} (std\+::string \mbox{\hyperlink{classServidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}})
+\begin{DoxyCompactList}\small\item\em Função que define o nome de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a4a232f83c626f7afcd98f1aeed5986f5}{set\+Descricao}} (std\+::string \mbox{\hyperlink{classServidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}})
+\begin{DoxyCompactList}\small\item\em Função que define a descrição de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a54f4816fb3fc642d398705fc771bef3a}{set\+Codigo\+Convite}} (std\+::string \mbox{\hyperlink{classServidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{codigo\+Convite}})
+\begin{DoxyCompactList}\small\item\em Função que define o código de convite de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_aed1337a3f669f526ab745bbb7b26986d}{set\+Canais}} (std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$ \mbox{\hyperlink{classServidor_a0d9ff033a10e411a79603736d3692b7e}{canais}})
+\begin{DoxyCompactList}\small\item\em Função que define os canais de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_aedddb5a7c5f851d083cb9ada9783fa5a}{set\+Participantes\+IDs}} (std\+::vector$<$ int $>$ \mbox{\hyperlink{classServidor_ac26153c0e4ee691298741be313624ea9}{participantes\+IDs}})
+\begin{DoxyCompactList}\small\item\em Função que define os ids dos participantes de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a675cf834a519ae1f6fb05d9ea4a2ea5d}{add\+Participantes\+IDs}} (int participante\+ID)
+\begin{DoxyCompactList}\small\item\em Função que adiciona o id de um participante na lista de participantes do servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServidor_a52c21983ad654fb7994dead4ae433e2c}\label{classServidor_a52c21983ad654fb7994dead4ae433e2c}} 
+int {\bfseries usuario\+Dono\+Id}
+\item 
+\mbox{\Hypertarget{classServidor_a1141e0835dfba56f4d01f922d2a8b34f}\label{classServidor_a1141e0835dfba56f4d01f922d2a8b34f}} 
+std\+::string \mbox{\hyperlink{classServidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}
+\begin{DoxyCompactList}\small\item\em Armazena o nome do servidor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServidor_a61fecd2b3435d7048d793741c5f3bfdf}\label{classServidor_a61fecd2b3435d7048d793741c5f3bfdf}} 
+std\+::string \mbox{\hyperlink{classServidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}}
+\begin{DoxyCompactList}\small\item\em Armazena a descrição do servidor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServidor_a7448f419ead42bf7f0bd42d5bdc53ec6}\label{classServidor_a7448f419ead42bf7f0bd42d5bdc53ec6}} 
+std\+::string \mbox{\hyperlink{classServidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{codigo\+Convite}}
+\begin{DoxyCompactList}\small\item\em Armazena o código necessário para entrar no servidor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServidor_a0d9ff033a10e411a79603736d3692b7e}\label{classServidor_a0d9ff033a10e411a79603736d3692b7e}} 
+std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$ \mbox{\hyperlink{classServidor_a0d9ff033a10e411a79603736d3692b7e}{canais}}
+\begin{DoxyCompactList}\small\item\em Armazena os canais cadastrados no servidor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServidor_ac26153c0e4ee691298741be313624ea9}\label{classServidor_ac26153c0e4ee691298741be313624ea9}} 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classServidor_ac26153c0e4ee691298741be313624ea9}{participantes\+IDs}}
+\begin{DoxyCompactList}\small\item\em Lista de usuarios que já estão no servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um servidor do sistema. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classServidor_a351e4e2f88fc744ca61e3d2c58534b06}\label{classServidor_a351e4e2f88fc744ca61e3d2c58534b06}} 
+\index{Servidor@{Servidor}!Servidor@{Servidor}}
+\index{Servidor@{Servidor}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{Servidor()}{Servidor()}}
+{\footnotesize\ttfamily Servidor\+::\+Servidor (\begin{DoxyParamCaption}\item[{int}]{usuario\+Dono\+Id,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{descricao,  }\item[{std\+::string}]{codigo\+Convite }\end{DoxyParamCaption})}
+
+
+
+Construtor com atributos de servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em usuario\+Dono\+Id} & \\
+\hline
+{\em nome} & \\
+\hline
+{\em descricao} & \\
+\hline
+{\em codigo\+Convite} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classServidor_a675cf834a519ae1f6fb05d9ea4a2ea5d}\label{classServidor_a675cf834a519ae1f6fb05d9ea4a2ea5d}} 
+\index{Servidor@{Servidor}!addParticipantesIDs@{addParticipantesIDs}}
+\index{addParticipantesIDs@{addParticipantesIDs}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{addParticipantesIDs()}{addParticipantesIDs()}}
+{\footnotesize\ttfamily void Servidor\+::add\+Participantes\+IDs (\begin{DoxyParamCaption}\item[{int}]{participante\+ID }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona o id de um participante na lista de participantes do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em participante\+ID} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a2a661d4516c7318f26bef56354f65f1c}\label{classServidor_a2a661d4516c7318f26bef56354f65f1c}} 
+\index{Servidor@{Servidor}!getCanais@{getCanais}}
+\index{getCanais@{getCanais}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getCanais()}{getCanais()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$ Servidor\+::get\+Canais (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna os canais de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+Canal$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_a246c9e826a657e9448cac0ed85206f30}\label{classServidor_a246c9e826a657e9448cac0ed85206f30}} 
+\index{Servidor@{Servidor}!getCodigoConvite@{getCodigoConvite}}
+\index{getCodigoConvite@{getCodigoConvite}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getCodigoConvite()}{getCodigoConvite()}}
+{\footnotesize\ttfamily std\+::string Servidor\+::get\+Codigo\+Convite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o código de convite de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_a7862d3dc42a161feb7500d8caf7fe25d}\label{classServidor_a7862d3dc42a161feb7500d8caf7fe25d}} 
+\index{Servidor@{Servidor}!getDescricao@{getDescricao}}
+\index{getDescricao@{getDescricao}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getDescricao()}{getDescricao()}}
+{\footnotesize\ttfamily std\+::string Servidor\+::get\+Descricao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a descrição de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_ac9bd9b0e9ec6a1cf884f8b0ba36e76b8}\label{classServidor_ac9bd9b0e9ec6a1cf884f8b0ba36e76b8}} 
+\index{Servidor@{Servidor}!getDonoID@{getDonoID}}
+\index{getDonoID@{getDonoID}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getDonoID()}{getDonoID()}}
+{\footnotesize\ttfamily int Servidor\+::get\+Dono\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que o id do dono de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_af094e7503c4fd8e124679f03eae3f0cd}\label{classServidor_af094e7503c4fd8e124679f03eae3f0cd}} 
+\index{Servidor@{Servidor}!getNome@{getNome}}
+\index{getNome@{getNome}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Servidor\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o nome do servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_a5583662547b3e58683dd4382bb2276c0}\label{classServidor_a5583662547b3e58683dd4382bb2276c0}} 
+\index{Servidor@{Servidor}!getParticipantesIDs@{getParticipantesIDs}}
+\index{getParticipantesIDs@{getParticipantesIDs}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getParticipantesIDs()}{getParticipantesIDs()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Servidor\+::get\+Participantes\+IDs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna os ids dos participantes de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$int$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_abc78d331b71facbcda20065f8dcca37e}\label{classServidor_abc78d331b71facbcda20065f8dcca37e}} 
+\index{Servidor@{Servidor}!getparticpantes@{getparticpantes}}
+\index{getparticpantes@{getparticpantes}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getparticpantes()}{getparticpantes()}}
+{\footnotesize\ttfamily int Servidor\+::getparticpantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de participantes em um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_aed1337a3f669f526ab745bbb7b26986d}\label{classServidor_aed1337a3f669f526ab745bbb7b26986d}} 
+\index{Servidor@{Servidor}!setCanais@{setCanais}}
+\index{setCanais@{setCanais}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setCanais()}{setCanais()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Canais (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$}]{canais }\end{DoxyParamCaption})}
+
+
+
+Função que define os canais de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canais} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a54f4816fb3fc642d398705fc771bef3a}\label{classServidor_a54f4816fb3fc642d398705fc771bef3a}} 
+\index{Servidor@{Servidor}!setCodigoConvite@{setCodigoConvite}}
+\index{setCodigoConvite@{setCodigoConvite}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setCodigoConvite()}{setCodigoConvite()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Codigo\+Convite (\begin{DoxyParamCaption}\item[{std\+::string}]{codigo\+Convite }\end{DoxyParamCaption})}
+
+
+
+Função que define o código de convite de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em codigo\+Convite} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a4a232f83c626f7afcd98f1aeed5986f5}\label{classServidor_a4a232f83c626f7afcd98f1aeed5986f5}} 
+\index{Servidor@{Servidor}!setDescricao@{setDescricao}}
+\index{setDescricao@{setDescricao}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setDescricao()}{setDescricao()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Descricao (\begin{DoxyParamCaption}\item[{std\+::string}]{descricao }\end{DoxyParamCaption})}
+
+
+
+Função que define a descrição de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em descricao} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a6ae819312dc3bd799002f92f64fb3b69}\label{classServidor_a6ae819312dc3bd799002f92f64fb3b69}} 
+\index{Servidor@{Servidor}!setDonoID@{setDonoID}}
+\index{setDonoID@{setDonoID}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setDonoID()}{setDonoID()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Dono\+ID (\begin{DoxyParamCaption}\item[{int}]{usuario\+Dono\+Id }\end{DoxyParamCaption})}
+
+
+
+Função que define o id do dono do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em usuario\+Dono\+Id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a655bd4dc2936b5a5fb57d29765d28ebc}\label{classServidor_a655bd4dc2936b5a5fb57d29765d28ebc}} 
+\index{Servidor@{Servidor}!setNome@{setNome}}
+\index{setNome@{setNome}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Função que define o nome de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_aedddb5a7c5f851d083cb9ada9783fa5a}\label{classServidor_aedddb5a7c5f851d083cb9ada9783fa5a}} 
+\index{Servidor@{Servidor}!setParticipantesIDs@{setParticipantesIDs}}
+\index{setParticipantesIDs@{setParticipantesIDs}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setParticipantesIDs()}{setParticipantesIDs()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Participantes\+IDs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{participantes\+IDs }\end{DoxyParamCaption})}
+
+
+
+Função que define os ids dos participantes de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em participantes\+IDs} & \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Servidor_8h}{Servidor.\+h}}\item 
+src/\mbox{\hyperlink{Servidor_8cpp}{Servidor.\+cpp}}\end{DoxyCompactItemize}

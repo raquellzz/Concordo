@@ -1,7 +1,7 @@
 /**
  * @file CanalVoz.h
  * 
- * @brief Classe que representa um canal de voz de um servidor.
+ * @brief Definição da classe CanalVoz.
  * 
  */
 
@@ -14,6 +14,10 @@
 #include "Mensagem.h"
 #include "Canal.h"
 
+/**
+ * @brief Classe que representa um canal de voz de um servidor.
+ * 
+ */
 class CanalVoz : public Canal{
     Mensagem ultimaMensagem; //!< Mensagem que aramazena todos os atributos da última mensagem enviada no canal de voz
 };

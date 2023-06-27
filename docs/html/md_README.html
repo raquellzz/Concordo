@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: README</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">README </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1 align="center">Projeto 3: Concordo </h1>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Índice</h1>
+<ul>
+<li><a href="#índice">Índice</a></li>
+<li><a href="#descrição-do-projeto">Descrição do Projeto</a></li>
+<li><a href="#roteiro-de-entradas-e-saídas">Roteiro de Entradas e Saídas</a></li>
+<li><a href="#acesso-ao-projeto-e-compilação">Acesso ao Projeto e Compilação</a></li>
+<li><a href="#pessoas-desenvolvedoras-do-projeto">Pessoas Desenvolvedoras do Projeto</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Descrição do Projeto</h1>
+<p>O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de programação C++ no desenvolvimento de um sistema de comunidades, denominado Concordo, com recursos similares ao Discord.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Roteiro de Entradas e Saídas</h1>
+<p>Essas são as possibildiades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades:</p>
+<p>Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.</p>
+<p>Os outputs estão caracterizados a seguir com o símbolo &gt; </p><div class="fragment"><div class="line">create-user marc@gmail senha1234 </div>
+<div class="line">&gt;</div>
+<div class="line">create-user raquel@gmail senha123 raquel freire</div>
+<div class="line">&gt;</div>
+<div class="line">create-user marc@gmail senha1234 Marcos B</div>
+<div class="line">&gt;</div>
+<div class="line">login raquel@gmail senhaErrada</div>
+<div class="line">&gt;</div>
+<div class="line">login raquel@gmail senha123</div>
+<div class="line">&gt;</div>
+<div class="line">create-server deus</div>
+<div class="line">&gt;</div>
+<div class="line">set-server-desc deus amem</div>
+<div class="line">&gt;</div>
+<div class="line">set-server-invite-code deus bora</div>
+<div class="line">&gt;</div>
+<div class="line">disconnect</div>
+<div class="line">&gt;</div>
+<div class="line">login marc@gmail senha1234</div>
+<div class="line">&gt;</div>
+<div class="line">quit</div>
+<div class="line">&gt;</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+Acesso ao Projeto e Compilação</h1>
+<p>É possível acessar o repositório do projeto no Github ou baixá-lo.</p>
+<p>Para compilação foi utilizado o Cmake na versão 3.22.1, para testar o programa é necessário ter o Cmake instalado.</p>
+<p>Dentro da pasta do projeto, para criar e entrar na pasta build, digite o comando </p><div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+</div><!-- fragment --><p> Em seguida </p><div class="fragment"><div class="line">cmake ..</div>
+<div class="line">make</div>
+</div><!-- fragment --><p> E para executar o programa </p><div class="fragment"><div class="line">./Concordo</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+Pessoas Desenvolvedoras do Projeto</h1>
+<p>Esse projeto foi desenvolvido pela aluna Raquel da Costa Freire, discente curso de graduação Tecnologia da Informação na UFRN no semestre 2023.1, por meio da disciplina Linguagem de Programação 1. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

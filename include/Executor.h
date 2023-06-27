@@ -1,7 +1,7 @@
 /**
  * @file Executor.h
  * 
- * @brief Classe que executa as funções do sistema.
+ * @brief Definição da classe Executor.
  * 
  * 
  */
@@ -15,7 +15,10 @@
 #include "Sistema.h"
 #include <fstream>
 
-
+/**
+ * @brief Classe que executa as funções do sistema.
+ * 
+ */
 class Executor{
 private:
     Sistema *sistema; //!< Cria o sistema que será utiliazdo na compilação

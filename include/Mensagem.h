@@ -1,7 +1,7 @@
 /**
  * @file Mensagem.h
  * 
- * @brief Classe que representa as mensagens enviadas no sistema.
+ * @brief Definição da classe Mensagem.
  * 
  */
 
@@ -11,6 +11,10 @@
 #include <string>
 #include <iostream>
 
+/**
+ * @brief Classe que representa as mensagens enviadas no sistema.
+ * 
+ */
 class Mensagem{
 private:
     int enviadaPor; //!< Armazena o id de quem enviou a mensagem

@@ -1,0 +1,84 @@
+\hypertarget{classExecutor}{}\doxysection{Referência da Classe Executor}
+\label{classExecutor}\index{Executor@{Executor}}
+
+
+Classe que executa as funções do sistema.  
+
+
+
+
+{\ttfamily \#include $<$Executor.\+h$>$}
+
+
+
+Diagrama de colaboração para Executor\+:
+% FIG 0
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classExecutor_aec8dad5a06ad5fb9543ac457753a6743}{Executor}} (\mbox{\hyperlink{classSistema}{Sistema}} $\ast$\mbox{\hyperlink{classExecutor_a32f5a713e158985d6774033ad8403db3}{sistema}})
+\begin{DoxyCompactList}\small\item\em Construtor de um executor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExecutor_a859a522e7bbd929840bcb26c0002f555}\label{classExecutor_a859a522e7bbd929840bcb26c0002f555}} 
+void \mbox{\hyperlink{classExecutor_a859a522e7bbd929840bcb26c0002f555}{iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Função que inicia a execução do programa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classExecutor_a1c540288beb471a4e77b1583d31f1f57}{Leitura\+Comandos}} (std\+::string linha, \mbox{\hyperlink{classSistema}{Sistema}} $\ast$\mbox{\hyperlink{classExecutor_a32f5a713e158985d6774033ad8403db3}{sistema}})
+\begin{DoxyCompactList}\small\item\em Função capaz de entender as linhas de comando. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExecutor_a32f5a713e158985d6774033ad8403db3}\label{classExecutor_a32f5a713e158985d6774033ad8403db3}} 
+\mbox{\hyperlink{classSistema}{Sistema}} $\ast$ \mbox{\hyperlink{classExecutor_a32f5a713e158985d6774033ad8403db3}{sistema}}
+\begin{DoxyCompactList}\small\item\em Cria o sistema que será utiliazdo na compilação. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExecutor_ac8f6f193341e1ef77030d5a12a9fb589}\label{classExecutor_ac8f6f193341e1ef77030d5a12a9fb589}} 
+bool \mbox{\hyperlink{classExecutor_ac8f6f193341e1ef77030d5a12a9fb589}{sair}} = false
+\begin{DoxyCompactList}\small\item\em Variável booleana para verificar se o sistema deve fechar ou não. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que executa as funções do sistema. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classExecutor_aec8dad5a06ad5fb9543ac457753a6743}\label{classExecutor_aec8dad5a06ad5fb9543ac457753a6743}} 
+\index{Executor@{Executor}!Executor@{Executor}}
+\index{Executor@{Executor}!Executor@{Executor}}
+\doxysubsubsection{\texorpdfstring{Executor()}{Executor()}}
+{\footnotesize\ttfamily Executor\+::\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSistema}{Sistema}} $\ast$}]{sistema }\end{DoxyParamCaption})}
+
+
+
+Construtor de um executor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em sistema} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classExecutor_a1c540288beb471a4e77b1583d31f1f57}\label{classExecutor_a1c540288beb471a4e77b1583d31f1f57}} 
+\index{Executor@{Executor}!LeituraComandos@{LeituraComandos}}
+\index{LeituraComandos@{LeituraComandos}!Executor@{Executor}}
+\doxysubsubsection{\texorpdfstring{LeituraComandos()}{LeituraComandos()}}
+{\footnotesize\ttfamily std\+::string Executor\+::\+Leitura\+Comandos (\begin{DoxyParamCaption}\item[{std\+::string}]{linha,  }\item[{\mbox{\hyperlink{classSistema}{Sistema}} $\ast$}]{sistema }\end{DoxyParamCaption})}
+
+
+
+Função capaz de entender as linhas de comando. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & \\
+\hline
+{\em sistema} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Executor_8h}{Executor.\+h}}\item 
+src/\mbox{\hyperlink{Executor_8cpp}{Executor.\+cpp}}\end{DoxyCompactItemize}

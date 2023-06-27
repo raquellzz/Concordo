@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/CanalTexto.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CanalTexto.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="CanalTexto_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef CANALTEXTO_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define CANALTEXTO_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Mensagem_8h.html">Mensagem.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Canal_8h.html">Canal.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classCanalTexto.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCanalTexto.html">CanalTexto</a> : <span class="keyword">public</span> <a class="code" href="classCanal.html">Canal</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classCanalTexto.html#affb8d63a2557ecdb20f8bde47a0f26b9">   22</a></span>&#160;    std::vector&lt;Mensagem&gt; <a class="code" href="classCanalTexto.html#affb8d63a2557ecdb20f8bde47a0f26b9">mensagens</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classCanalTexto.html#ae2b63bebfe0367db3f20b1abf08f35c7">CanalTexto</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classCanalTexto.html#ae2b63bebfe0367db3f20b1abf08f35c7">CanalTexto</a>(std::string <a class="code" href="classCanal.html#ac5e6d80712597bacacd46c0d153c2644">nome</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::vector&lt;Mensagem&gt; getMensagens();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> setMensagens(std::vector&lt;Mensagem&gt; <a class="code" href="classCanalTexto.html#affb8d63a2557ecdb20f8bde47a0f26b9">mensagens</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aCanal_8h_html"><div class="ttname"><a href="Canal_8h.html">Canal.h</a></div><div class="ttdoc">Definição da classe Canal.</div></div>
+<div class="ttc" id="aMensagem_8h_html"><div class="ttname"><a href="Mensagem_8h.html">Mensagem.h</a></div><div class="ttdoc">Definição da classe Mensagem.</div></div>
+<div class="ttc" id="aclassCanalTexto_html"><div class="ttname"><a href="classCanalTexto.html">CanalTexto</a></div><div class="ttdoc">Classe que representa um canal de texto de um servidor.</div><div class="ttdef"><b>Definition:</b> CanalTexto.h:21</div></div>
+<div class="ttc" id="aclassCanalTexto_html_ae2b63bebfe0367db3f20b1abf08f35c7"><div class="ttname"><a href="classCanalTexto.html#ae2b63bebfe0367db3f20b1abf08f35c7">CanalTexto::CanalTexto</a></div><div class="ttdeci">CanalTexto()</div><div class="ttdoc">Construtor vazio de um canal de texto.</div><div class="ttdef"><b>Definition:</b> CanalTexto.cpp:15</div></div>
+<div class="ttc" id="aclassCanalTexto_html_affb8d63a2557ecdb20f8bde47a0f26b9"><div class="ttname"><a href="classCanalTexto.html#affb8d63a2557ecdb20f8bde47a0f26b9">CanalTexto::mensagens</a></div><div class="ttdeci">std::vector&lt; Mensagem &gt; mensagens</div><div class="ttdoc">Armazena todas as mensagens enviadas no canal de texto.</div><div class="ttdef"><b>Definition:</b> CanalTexto.h:22</div></div>
+<div class="ttc" id="aclassCanal_html"><div class="ttname"><a href="classCanal.html">Canal</a></div><div class="ttdoc">Classe que representa um canal de um servidor.</div><div class="ttdef"><b>Definition:</b> Canal.h:18</div></div>
+<div class="ttc" id="aclassCanal_html_ac5e6d80712597bacacd46c0d153c2644"><div class="ttname"><a href="classCanal.html#ac5e6d80712597bacacd46c0d153c2644">Canal::nome</a></div><div class="ttdeci">std::string nome</div><div class="ttdoc">Armazena o nome do canal.</div><div class="ttdef"><b>Definition:</b> Canal.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

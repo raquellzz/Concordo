@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de include/Mensagem.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Concordo
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Mensagem.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Mensagem_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef MENSAGEM_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define MENSAGEM_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classMensagem.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMensagem.html">Mensagem</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classMensagem.html#a0a45f35c79602ab6d735da42fe2ca3d9">   20</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classMensagem.html#a0a45f35c79602ab6d735da42fe2ca3d9">enviadaPor</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classMensagem.html#a4528293f2e30645057002b8ad6c2c8cf">   21</a></span>&#160;    std::string <a class="code" href="classMensagem.html#a4528293f2e30645057002b8ad6c2c8cf">dataHora</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classMensagem.html#a97184a35f33bca1c7a1bf6832f1caaec">   22</a></span>&#160;    std::string <a class="code" href="classMensagem.html#a97184a35f33bca1c7a1bf6832f1caaec">conteudo</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//specials</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classMensagem.html#ae8d4413de4a085a5b93ee3bd1779abdf">Mensagem</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classMensagem.html#ae8d4413de4a085a5b93ee3bd1779abdf">Mensagem</a>(<span class="keywordtype">int</span> <a class="code" href="classMensagem.html#a0a45f35c79602ab6d735da42fe2ca3d9">enviadaPor</a>, std::string <a class="code" href="classMensagem.html#a4528293f2e30645057002b8ad6c2c8cf">dataHora</a>, std::string <a class="code" href="classMensagem.html#a97184a35f33bca1c7a1bf6832f1caaec">conteudo</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//gets</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classMensagem.html#aad3ea72d49deed5c0e30a54afe02d6e5">getEnviadaPor</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::string <a class="code" href="classMensagem.html#aaf2acb25086547e7ee8b5340d367323a">getDataHora</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string <a class="code" href="classMensagem.html#ac0d190a683028eb0c065c420b1f304bd">getConteudo</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//sets</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMensagem.html#af18f0bbcc534744483e02bbb9c7290bf">setEnviadaPor</a>(<span class="keywordtype">int</span> <a class="code" href="classMensagem.html#a0a45f35c79602ab6d735da42fe2ca3d9">enviadaPor</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMensagem.html#ac57206db81b34217b77d3249325de59b">setDataHora</a>(std::string <a class="code" href="classMensagem.html#a4528293f2e30645057002b8ad6c2c8cf">dataHora</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMensagem.html#ae8a86e2df0d2d8367234d094177a7e48">setConteudo</a>(std::string <a class="code" href="classMensagem.html#a97184a35f33bca1c7a1bf6832f1caaec">conteudo</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassMensagem_html"><div class="ttname"><a href="classMensagem.html">Mensagem</a></div><div class="ttdoc">Classe que representa as mensagens enviadas no sistema.</div><div class="ttdef"><b>Definition:</b> Mensagem.h:18</div></div>
+<div class="ttc" id="aclassMensagem_html_a0a45f35c79602ab6d735da42fe2ca3d9"><div class="ttname"><a href="classMensagem.html#a0a45f35c79602ab6d735da42fe2ca3d9">Mensagem::enviadaPor</a></div><div class="ttdeci">int enviadaPor</div><div class="ttdoc">Armazena o id de quem enviou a mensagem.</div><div class="ttdef"><b>Definition:</b> Mensagem.h:20</div></div>
+<div class="ttc" id="aclassMensagem_html_a4528293f2e30645057002b8ad6c2c8cf"><div class="ttname"><a href="classMensagem.html#a4528293f2e30645057002b8ad6c2c8cf">Mensagem::dataHora</a></div><div class="ttdeci">std::string dataHora</div><div class="ttdoc">Armazena a data e o horário em que a mensagem foi enviada.</div><div class="ttdef"><b>Definition:</b> Mensagem.h:21</div></div>
+<div class="ttc" id="aclassMensagem_html_a97184a35f33bca1c7a1bf6832f1caaec"><div class="ttname"><a href="classMensagem.html#a97184a35f33bca1c7a1bf6832f1caaec">Mensagem::conteudo</a></div><div class="ttdeci">std::string conteudo</div><div class="ttdoc">Armazena o conteúdo da mensagem.</div><div class="ttdef"><b>Definition:</b> Mensagem.h:22</div></div>
+<div class="ttc" id="aclassMensagem_html_aad3ea72d49deed5c0e30a54afe02d6e5"><div class="ttname"><a href="classMensagem.html#aad3ea72d49deed5c0e30a54afe02d6e5">Mensagem::getEnviadaPor</a></div><div class="ttdeci">int getEnviadaPor()</div><div class="ttdoc">Função que retorna o id do usuário que enviou a mensagem.</div><div class="ttdef"><b>Definition:</b> Mensagem.cpp:40</div></div>
+<div class="ttc" id="aclassMensagem_html_aaf2acb25086547e7ee8b5340d367323a"><div class="ttname"><a href="classMensagem.html#aaf2acb25086547e7ee8b5340d367323a">Mensagem::getDataHora</a></div><div class="ttdeci">std::string getDataHora()</div><div class="ttdoc">Função que retorna a data e hora da mensagem enviada.</div><div class="ttdef"><b>Definition:</b> Mensagem.cpp:49</div></div>
+<div class="ttc" id="aclassMensagem_html_ac0d190a683028eb0c065c420b1f304bd"><div class="ttname"><a href="classMensagem.html#ac0d190a683028eb0c065c420b1f304bd">Mensagem::getConteudo</a></div><div class="ttdeci">std::string getConteudo()</div><div class="ttdoc">Função que retorna o conteúdo da mensagem enviada.</div><div class="ttdef"><b>Definition:</b> Mensagem.cpp:58</div></div>
+<div class="ttc" id="aclassMensagem_html_ac57206db81b34217b77d3249325de59b"><div class="ttname"><a href="classMensagem.html#ac57206db81b34217b77d3249325de59b">Mensagem::setDataHora</a></div><div class="ttdeci">void setDataHora(std::string dataHora)</div><div class="ttdoc">Função que define a data e hora da mensagem enviada.</div><div class="ttdef"><b>Definition:</b> Mensagem.cpp:76</div></div>
+<div class="ttc" id="aclassMensagem_html_ae8a86e2df0d2d8367234d094177a7e48"><div class="ttname"><a href="classMensagem.html#ae8a86e2df0d2d8367234d094177a7e48">Mensagem::setConteudo</a></div><div class="ttdeci">void setConteudo(std::string conteudo)</div><div class="ttdoc">Função que define o conteúdo da mensagem enviada.</div><div class="ttdef"><b>Definition:</b> Mensagem.cpp:85</div></div>
+<div class="ttc" id="aclassMensagem_html_ae8d4413de4a085a5b93ee3bd1779abdf"><div class="ttname"><a href="classMensagem.html#ae8d4413de4a085a5b93ee3bd1779abdf">Mensagem::Mensagem</a></div><div class="ttdeci">Mensagem()</div><div class="ttdoc">Construtor vazio de uma mensagem.</div><div class="ttdef"><b>Definition:</b> Mensagem.cpp:16</div></div>
+<div class="ttc" id="aclassMensagem_html_af18f0bbcc534744483e02bbb9c7290bf"><div class="ttname"><a href="classMensagem.html#af18f0bbcc534744483e02bbb9c7290bf">Mensagem::setEnviadaPor</a></div><div class="ttdeci">void setEnviadaPor(int enviadaPor)</div><div class="ttdoc">Função que define o id do usuário que enviou a mensagem.</div><div class="ttdef"><b>Definition:</b> Mensagem.cpp:67</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

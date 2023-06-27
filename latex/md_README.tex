@@ -1,0 +1,64 @@
+\doxysection*{Projeto 3\+: Concordo }\hypertarget{md_README_autotoc_md6}{}\doxysection{Índice}\label{md_README_autotoc_md6}
+
+\begin{DoxyItemize}
+\item \href{\#\%C3\%ADndice}{\texttt{ Índice}}
+\item \href{\#descri\%C3\%A7\%C3\%A3o-do-projeto}{\texttt{ Descrição do Projeto}}
+\item \href{\#roteiro-de-entradas-e-sa\%C3\%ADdas}{\texttt{ Roteiro de Entradas e Saídas}}
+\item \href{\#acesso-ao-projeto-e-compila\%C3\%A7\%C3\%A3o}{\texttt{ Acesso ao Projeto e Compilação}}
+\item \href{\#pessoas-desenvolvedoras-do-projeto}{\texttt{ Pessoas Desenvolvedoras do Projeto}}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysection{Descrição do Projeto}\label{md_README_autotoc_md7}
+O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de programação C++ no desenvolvimento de um sistema de comunidades, denominado Concordo, com recursos similares ao Discord.\hypertarget{md_README_autotoc_md8}{}\doxysection{Roteiro de Entradas e Saídas}\label{md_README_autotoc_md8}
+Essas são as possibildiades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades\+:
+
+Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.
+
+Os outputs estão caracterizados a seguir com o símbolo $>$ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{create-\/user marc@gmail senha1234 }
+\DoxyCodeLine{>}
+\DoxyCodeLine{create-\/user raquel@gmail senha123 raquel freire}
+\DoxyCodeLine{>}
+\DoxyCodeLine{create-\/user marc@gmail senha1234 Marcos B}
+\DoxyCodeLine{>}
+\DoxyCodeLine{login raquel@gmail senhaErrada}
+\DoxyCodeLine{>}
+\DoxyCodeLine{login raquel@gmail senha123}
+\DoxyCodeLine{>}
+\DoxyCodeLine{create-\/server deus}
+\DoxyCodeLine{>}
+\DoxyCodeLine{set-\/server-\/desc deus amem}
+\DoxyCodeLine{>}
+\DoxyCodeLine{set-\/server-\/invite-\/code deus bora}
+\DoxyCodeLine{>}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{>}
+\DoxyCodeLine{login marc@gmail senha1234}
+\DoxyCodeLine{>}
+\DoxyCodeLine{quit}
+\DoxyCodeLine{>}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md9}{}\doxysection{Acesso ao Projeto e Compilação}\label{md_README_autotoc_md9}
+É possível acessar o repositório do projeto no Github ou baixá-\/lo.
+
+Para compilação foi utilizado o Cmake na versão 3.\+22.\+1, para testar o programa é necessário ter o Cmake instalado.
+
+Dentro da pasta do projeto, para criar e entrar na pasta build, digite o comando 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+
+\end{DoxyCode}
+ Em seguida 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+ E para executar o programa 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./Concordo}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md10}{}\doxysection{Pessoas Desenvolvedoras do Projeto}\label{md_README_autotoc_md10}
+Esse projeto foi desenvolvido pela aluna Raquel da Costa Freire, discente curso de graduação Tecnologia da Informação na UFRN no semestre 2023.\+1, por meio da disciplina Linguagem de Programação 1. 

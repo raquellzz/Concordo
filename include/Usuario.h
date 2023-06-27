@@ -1,13 +1,12 @@
 /**
  * @file Usuario.h
  * 
- * @brief Classe que representa um usuário do sistema;
+ * @brief Definição da classe Usuario;
  * 
  * @details A classe usuário é responsável por armazenar as informações de um usuário, como seu id, nome, email e senha.
  * 
  * 
  */
-
 
 #ifndef USUARIO_H
 #define USUARIO_H
@@ -16,7 +15,10 @@
 #include <iostream>
 
 
-
+/**
+ * @brief Classe que representa um usuário do sistema;
+ * 
+ */
 class Usuario{
     private:
         int id; //!< Armazena o id do usuário

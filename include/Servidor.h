@@ -1,7 +1,7 @@
 /**
  * @file Servidor.h
  * 
- * @brief Classe que representa um servidor do sistema.
+ * @brief Definição da classe Servidor.
  * 
  * @details A classe servidor é responsável por armazenar as informações de um servidor, como seu nome, descrição, código, canais, id do dono e ids dos participantes.
  * 
@@ -17,7 +17,10 @@
 #include "Canal.h"
 
 
-
+/**
+ * @brief Classe que representa um servidor do sistema.
+ * 
+ */
 class Servidor{
 private:
     int usuarioDonoId;
