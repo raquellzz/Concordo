@@ -13,7 +13,7 @@ class Usuario{
     public:
         //specials
         Usuario();
-        Usuario(int id, std::string nome, std::string email, std::string senha);
+        Usuario(int id, std::string email, std::string senha, std::string nome);
         ~Usuario();
 
         //gets

@@ -5,11 +5,14 @@
 #include <iostream>
 #include <vector>
 #include "Sistema.h"
+#include <fstream>
 
 
 class Executor{
 private:
     Sistema *sistema;
+    
+    bool sair = false;
 
 public:
     Executor(Sistema *sistema);

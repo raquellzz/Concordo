@@ -24,6 +24,7 @@ public:
     ~Servidor();
 
 //gets
+    int getparticpantes();
     int getDonoID();
     std::string getNome();
     std::string getDescricao();

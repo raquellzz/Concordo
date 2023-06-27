@@ -10,8 +10,7 @@ Usuario::Usuario(){
 }
 
 //construtor com atributos
-Usuario::Usuario(int id, std::string nome, std::string email, std::string senha){
-    this->id = id;
+Usuario::Usuario(int id, std::string email, std::string senha, std::string nome){
     this->nome = nome;
     this->email = email;
     this->senha = senha;

@@ -1,0 +1,5 @@
+create-user raquel@gmail raqu raquel freire
+login raquel@gmail raqu
+quit
+create-server gracas a deus
+set-server-disc gracas a deus 

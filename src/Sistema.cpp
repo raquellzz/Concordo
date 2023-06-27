@@ -1,29 +1,50 @@
 #include "Sistema.h"
 #include <iostream>
+#include "Usuario.h"
+#include <vector>
+
+void Sistema::increaseId(){
+    id++;
+}
+
+int Sistema::getId(){
+    return id;
+}
+
+int Sistema::getusuarios(){
+    return usuarios.size();
+}
+
+int Sistema::getServidores(){
+    return servidores.size();
+}
 
 std::string Sistema::verify_login(int usuarioLogadoId){
     if (usuarioLogadoId == -1){
         return "Nenhum usuário logado!";
     }
+    return "";
 }
 
 std::string Sistema::quit(){
     return "Saindo do Concordo...";
 }
 
-std::string Sistema::create_user (int *id, std::string email, std::string senha, std::string nome){
+std::string Sistema::create_user (const std::string email, const std::string senha, const std::string nome){
     verify_login(usuarioLogadoId);
     if(email == "" || senha == "" || nome == ""){
         return "Dados inválidos.";
     }
-    for(int i = 0; i < usuarios.size(); i++){
+    for(int i = 0; i < getusuarios(); i++){
         if(usuarios[i].getEmail() == email){
             return "Usuário já existe.";
         }
     }
-    Usuario novoUsuario(*id, email, senha, nome);
+    
+    increaseId();
+    Usuario novoUsuario(id, email, senha, nome);
     usuarios.push_back(novoUsuario);
-    (*id)++;
+    std::cout << usuarios[0].getNome() << "\n";
     return "Usuário criado com sucesso!";
 }
 
@@ -31,11 +52,11 @@ std::string Sistema::login (std::string email, std::string senha){
     if(usuarioLogadoId != -1){
         return "Usuário já está logado!";
     }
-    for (int i = 0; i < usuarios.size(); i++){
+    for (int i = 0; i < getusuarios(); i++){
         if (usuarios[i].getEmail() == email){
             if (usuarios[i].getSenha() == senha){
                 usuarioLogadoId = usuarios[i].getId();
-                return "Login efetuado com sucesso!";
+                return "Logado como " + usuarios[i].getEmail() + "!";
             }
             else{
                 return "Senha incorreta!";
@@ -52,7 +73,7 @@ std::string Sistema::disconnect(){
 
 std::string Sistema::create_server (std::string nome){
     verify_login(usuarioLogadoId);
-    for (int i = 0; i < servidores.size(); i++){
+    for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == nome){
             return "Servidor já existe!";
         }
@@ -65,8 +86,11 @@ std::string Sistema::create_server (std::string nome){
 
 std::string Sistema::set_server_desc(std::string nome, std::string descricao){
     verify_login(usuarioLogadoId);
-    for (int i = 0; i < servidores.size(); i++){
+    for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == nome){
+            if(servidores[i].getDonoID() != usuarioLogadoId){
+                return "Você não é o dono do servidor!";
+            }
             servidores[i].setDescricao(descricao);
             return "Descrição adicionada com sucesso!";
         }
@@ -76,8 +100,11 @@ std::string Sistema::set_server_desc(std::string nome, std::string descricao){
 
 std::string Sistema::set_server_invite_code(std::string nome, std::string codigo){
     verify_login(usuarioLogadoId);
-    for (int i = 0; i < servidores.size(); i++){
+    for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == nome){
+            if(servidores[i].getDonoID() != usuarioLogadoId){
+                return "Você não é o dono do servidor!";
+            }
             servidores[i].setCodigoConvite(codigo);
             return "Código de convite adicionado com sucesso!";
         }
@@ -88,7 +115,7 @@ std::string Sistema::set_server_invite_code(std::string nome, std::string codigo
 std::string Sistema::list_servers(){
     verify_login(usuarioLogadoId);
     std::string lista = "";
-    for (int i = 0; i < servidores.size(); i++){
+    for (int i = 0; i < getServidores(); i++){
         lista += servidores[i].getNome() + "\n";
     }
     return lista;
@@ -96,7 +123,7 @@ std::string Sistema::list_servers(){
 
 std::string Sistema::remove_server(std::string nome){
     verify_login(usuarioLogadoId);
-    for (int i = 0; i < servidores.size(); i++){
+    for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == nome){
             if (servidores[i].getDonoID() == usuarioLogadoId){
                 servidores.erase(servidores.begin() + i);
@@ -112,7 +139,7 @@ std::string Sistema::remove_server(std::string nome){
 
 std::string Sistema::enter_server(std::string nome, std::string codigo){
     verify_login(usuarioLogadoId);
-    for (int i = 0; i < servidores.size(); i++){
+    for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == nome){
             if (servidores[i].getCodigoConvite() == codigo){
                 servidorAtual = nome;
@@ -134,11 +161,11 @@ std::string Sistema::leave_server(){
 
 std::string Sistema::list_participants(){
     verify_login(usuarioLogadoId);
-    for (int i = 0; i < servidores.size(); i++){
+    for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == servidorAtual){
             std::string lista = "";
-            for (int j = 0; j < servidores[i].getParticipantesIDs().size(); j++){
-                for(int k = 0; k < usuarios.size(); k++){
+            for (int j = 0; j < servidores[i].getparticpantes(); j++){
+                for(int k = 0; k < getusuarios(); k++){
                     if(usuarios[k].getId() == servidores[i].getParticipantesIDs()[j]){
                         lista += usuarios[k].getNome() + "\n";
                     }

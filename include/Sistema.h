@@ -12,15 +12,20 @@
 class Sistema{
 private:
     std::vector<Usuario> usuarios;
+    std::vector<std::string>emails;
     std::vector<Servidor> servidores;
     int usuarioLogadoId = -1;
     std::string servidorAtual;
     std::string canalAtual;
-    int *id = 0;
+    int id = 0;
 public:
+    void increaseId();
+    int getId();
+    int getusuarios();
+    int getServidores();
     std::string verify_login(int usuarioLogadoId);
     std::string quit();
-    std::string create_user (int *id, std::string email, std::string senha, std::string nome);
+    std::string create_user (const std::string email, const std::string senha, const std::string nome);
     std::string login (std::string email, std::string senha);
     std::string disconnect();
     std::string create_server (std::string nome);

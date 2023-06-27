@@ -22,6 +22,10 @@ Servidor::Servidor(int usuarioDonoId, std::string nome, std::string descricao, s
 Servidor::~Servidor(){
 }
 
+int Servidor::getparticpantes(){
+    return this->participantesIDs.size();
+}
+
 int Servidor::getDonoID(){
     return this->usuarioDonoId;
 }
