@@ -2,9 +2,9 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
-- Nome: *<"Raquel da Costa Freire">*
+- Nome: *<Raquel da Costa Freire>*
 - Email: *<raquelcostafreire24@gmail.com>*
-- Turma: *<"T01">*
+- Turma: *<T 01>*
 
 # Indique quais recursos abaixo foram implementados no Concordo
 
@@ -42,6 +42,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 ## Funcionalidades (parte 3)
 
 **C1 - Implementar Persistência dos dados em disco**
+
 *Métodos privados*
 - [] `void salvarUsuarios()`
 - [] `void salvarServidores()`
@@ -49,6 +50,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [] `void salvar()`
 
 **C2 - Implementar restauração dos dados do disco na inicialização do sistema**
+
 *Métodos privados*
 - [] `void carregarUsuarios()`
 - [] `void carregarServidores()`
