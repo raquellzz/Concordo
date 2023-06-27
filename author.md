@@ -2,9 +2,9 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
-- Nome: *<Raquel da Costa Freire>*
+- Nome: *<"Raquel da Costa Freire">*
 - Email: *<raquelcostafreire24@gmail.com>*
-- Turma: *<T01>*
+- Turma: *<"T01">*
 
 # Indique quais recursos abaixo foram implementados no Concordo
 
