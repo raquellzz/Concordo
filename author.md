@@ -6,9 +6,9 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - Email: *<raquelcostafreire24@gmail.com>*
 - Turma: *<T01>*
 
-# Indique quais recursos abaixo foram implementados
+# Indique quais recursos abaixo foram implementados no Concordo
 
-## Concordo
+## Funcionalidades (parte 1)
 
 **A1 - Se não estiver logado**
 - [x] Sair do sistemas
@@ -26,6 +26,9 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [x] Sair de um servidor
 - [x] Listar pessoas no servidor
 
+
+## Funcionalidades (parte 2)
+
 **B1 - Gestão de canais**
 - [] Listar canais do Servidor
 - [] Criar um canal no servidor
@@ -35,40 +38,23 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 **B2 - Gestão de mensagens**
 - [] Enviar mensagem para o canal
 - [] Visualizar mensagens do canal
-- [] 
-- [] 
 
-**Operator overloading (4 credits)**
-- [] 
-- [] 
-- [] 
-- [] 
+## Funcionalidades (parte 3)
 
-**Methods that require iterators (19 credits)**
-- [x] `insert(iterator,value)` (4 credits)
-- [x] `insert(iterator,range)` (4 credits)
-- [x] `insert(iterator,initializer list)` (4 credits)
-- [x] `erase(iterator)` (3 credits)
-- [x] `erase(range)` (3 credits)
+**C1 - Implementar Persistência dos dados em disco**
+*Métodos privados*
+- [] `void salvarUsuarios()`
+- [] `void salvarServidores()`
+*Método público*
+- [] `void salvar()`
 
-**Utility methods (40 credits)**
-- [x] `merge(other)` (8 credits)
-- [x] `splice(pos,other)` (8 credits)
-- [x] `reverse()` (8 credits)
-- [x] `unique()` (8 credits)
-- [x] `sort()` (8 credits)
+**C2 - Implementar restauração dos dados do disco na inicialização do sistema**
+*Métodos privados*
+- [] `void carregarUsuarios()`
+- [] `void carregarServidores()`
+*Método público*
+- [] `void carregar()`
 
-## Implementação do Iterator
 
-**Special members (3 credits)**
-- [x] Regular constructor (1 credits)
-- [x] Copy constructor (1 credits)
-- [x] Assignment operator (1 credits)
-
-**Navigation methods (7 credits)**
-- [x] increment operator `++it` and `it++` (2 credits)
-- [x] decrement operator `--it` and `it--` (2 credits)
-- [x] dereference operator `*it` (1 credits)
-- [x] equality/difference operators `it1==it2` and `it1!=it2` (2 credits)
 
 --------
