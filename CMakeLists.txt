@@ -6,7 +6,7 @@ set( CMAKE_CXX_FLAGS "-Wall")
 include_directories( include )
 
 
-add_executable( program
+add_executable( Concordo
                 src/main.cpp
                 src/Usuario.cpp
                 src/Sistema.cpp
@@ -17,4 +17,4 @@ add_executable( program
                 src/CanalTexto.cpp
                 src/Canal.cpp)
 
-set_property(TARGET program PROPERTY CXX_STANDARD 14)
+set_property(TARGET Concordo PROPERTY CXX_STANDARD 14)

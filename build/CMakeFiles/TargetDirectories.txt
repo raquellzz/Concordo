@@ -1,3 +1,0 @@
-/home/levingu/Documentos/Concordo/build/CMakeFiles/program.dir
-/home/levingu/Documentos/Concordo/build/CMakeFiles/edit_cache.dir
-/home/levingu/Documentos/Concordo/build/CMakeFiles/rebuild_cache.dir
