@@ -14,35 +14,89 @@ O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de prog
 
 # Roteiro de Entradas e Saídas
 
-Essas são as possibildiades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades:
+O sistema pode receber os seguintes comandos:
+
+```
+quit
+
+create-user <email> <senha_sem_espaços> <nome com espaços>
+
+login <email> <senha>
+
+disconnect
+
+create-server <nome>
+
+set-server-desc <nome> <descrição>
+
+set-server-invite-code <nome> <código>
+
+list-servers 
+
+remove-server <nome>
+
+enter-server <nome> <código>
+
+list-participants
+
+```
+
+Essas são as possibilidades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades:
 
 Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.
 
-Os outputs estão caracterizados a seguir com o símbolo >
+Note que outputs estão caracterizados a seguir com o símbolo ">" apenas para facilitar a compreensão das entradas e saídas, no terminal não possui esse símbolo antes de cada saída.
 ```
 create-user marc@gmail senha1234 
->
+>Dados inválidos.
 create-user raquel@gmail senha123 raquel freire
->
+>Usuário criado com sucesso!
 create-user marc@gmail senha1234 Marcos B
->
+>Usuário criado com sucesso!
 login raquel@gmail senhaErrada
->
+>Senha incorreta!
 login raquel@gmail senha123
->
+>Logado como raquel@gmail!
 create-server deus
->
+>Servidor criado com sucesso!
+create-server spa
+>Servidor criado com sucesso!
 set-server-desc deus amem
->
+>Descrição adicionada com sucesso!
 set-server-invite-code deus bora
->
+>Código de convite adicionado com sucesso!
 disconnect
->
+>Desconectado com sucesso!
 login marc@gmail senha1234
->
+>Logado como marc@gmail!
+list-servers
+>deus
+>spa
+enter-server deus
+>Código de convite inválido!
+enter-server deus bora
+>Entrou no servidor com sucesso!
+list-participants
+>raquel freire
+>Marcos B
+remove-server deus
+>Você não é o dono do servidor!
+leave-server
+>Saindo do servidor...
+disconnect
+>Desconectado com sucesso!
+login raquel@gmail senha123
+>Logado como raquel@gmail!
+remove-server deus
+>Servidor removido com sucesso!
+list-servers
+>spa
+disconnect
+>Desconectado com sucesso!
 quit
->
+>Saindo do Concordo...
 ```
+
 
 # Acesso ao Projeto e Compilação
 

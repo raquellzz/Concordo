@@ -200,6 +200,10 @@ std::string Sistema::list_servers(){
     verify_login(usuarioLogadoId);
     std::string lista = "";
     for (int i = 0; i < getServidores(); i++){
+        if(i == getServidores()-1){
+            lista += servidores[i].getNome();
+            return lista;
+        }
         lista += servidores[i].getNome() + "\n";
     }
     return lista;
@@ -276,10 +280,13 @@ std::string Sistema::list_participants(){
             for (int j = 0; j < servidores[i].getparticpantes(); j++){
                 for(int k = 0; k < getusuarios(); k++){
                     if(usuarios[k].getId() == servidores[i].getParticipantesIDs()[j]){
-                        if(k != getusuarios() - 1)
-                            lista += usuarios[k].getNome() + "\n";
+                        if(k == getusuarios() - 1){
+                            lista += usuarios[k].getNome();
+                            break;
+                        }
+                        lista += usuarios[k].getNome() + "\n";
                     }
-                    lista += usuarios[k].getNome();
+                    
                 }
             }
             if(lista != "")
