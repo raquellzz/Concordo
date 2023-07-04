@@ -41,7 +41,7 @@ list-participants
 
 ```
 
-Essas são as possibilidades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades:
+Essas são as possibilidades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades da parte 1:
 
 Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.
 
@@ -98,7 +98,7 @@ quit
 ```
 A seguir estão as possibilidades do programa para testar as funcionalidades da parte 2:
 
-Note que quando a mensagem é mostrada, a parte de data e hora está de maneira generalizada no formato "<dia/mês/ano - horas:minutos:segundos>", mas quando o programa estiver rodando, será impresso as informações características do momento em que o programa está sendoe executado.
+Note que quando a mensagem é mostrada, a parte de data e hora está de maneira generalizada no formato "<dia/mês/ano - horas:minutos:segundos>", mas quando o programa estiver rodando, seram impressas as informações características do momento em que o programa está sendo executado.
 
 ```
 create-user raquel@gmail senha123 raquel freire
