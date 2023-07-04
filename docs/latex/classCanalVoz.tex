@@ -17,18 +17,91 @@ Diagrama de hierarquia para Canal\+Voz\+:
 
 Diagrama de colaboração para Canal\+Voz\+:
 % FIG 1
-\doxysubsection*{Atributos Privados}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCanalVoz_af08207ca2ac3ed46b8bdb812c501099a}{Canal\+Voz}} (std\+::string \mbox{\hyperlink{classCanal_ac5e6d80712597bacacd46c0d153c2644}{nome}})
+\begin{DoxyCompactList}\small\item\em Construtor de um canal de voz. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCanalVoz_a2607cac500f2973b12699d80aa44f6b5}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o tipo de um canal de voz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMensagem}{Mensagem}} \mbox{\hyperlink{classCanalVoz_acc210f2a7170abade926669b4c53cad4}{get\+Ultima\+Mensagem}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a última mensagem enviada no canal de voz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanalVoz_ad4cc79942d3690f4be462d58dbc5f64b}{set\+Ultima\+Mensagem}} (\mbox{\hyperlink{classMensagem}{Mensagem}} \mbox{\hyperlink{classCanalVoz_a5980806ae2e2360d98c2ef9539a0a8f1}{ultima\+Mensagem}})
+\begin{DoxyCompactList}\small\item\em Função que altera a última mensagem enviada no canal de voz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classCanalVoz_a5980806ae2e2360d98c2ef9539a0a8f1}\label{classCanalVoz_a5980806ae2e2360d98c2ef9539a0a8f1}} 
 \mbox{\hyperlink{classMensagem}{Mensagem}} \mbox{\hyperlink{classCanalVoz_a5980806ae2e2360d98c2ef9539a0a8f1}{ultima\+Mensagem}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMensagem}{Mensagem}} que aramazena todos os atributos da última mensagem enviada no canal de voz. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Outros membros herdados}
 
 
 \doxysubsection{Descrição detalhada}
 Classe que representa um canal de voz de um servidor. 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classCanalVoz_af08207ca2ac3ed46b8bdb812c501099a}\label{classCanalVoz_af08207ca2ac3ed46b8bdb812c501099a}} 
+\index{CanalVoz@{CanalVoz}!CanalVoz@{CanalVoz}}
+\index{CanalVoz@{CanalVoz}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{CanalVoz()}{CanalVoz()}}
+{\footnotesize\ttfamily Canal\+Voz\+::\+Canal\+Voz (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Construtor de um canal de voz. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classCanalVoz_a2607cac500f2973b12699d80aa44f6b5}\label{classCanalVoz_a2607cac500f2973b12699d80aa44f6b5}} 
+\index{CanalVoz@{CanalVoz}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily std\+::string Canal\+Voz\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o tipo de um canal de voz. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCanalVoz_acc210f2a7170abade926669b4c53cad4}\label{classCanalVoz_acc210f2a7170abade926669b4c53cad4}} 
+\index{CanalVoz@{CanalVoz}!getUltimaMensagem@{getUltimaMensagem}}
+\index{getUltimaMensagem@{getUltimaMensagem}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{getUltimaMensagem()}{getUltimaMensagem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMensagem}{Mensagem}} Canal\+Voz\+::get\+Ultima\+Mensagem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a última mensagem enviada no canal de voz. 
+
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMensagem}{Mensagem}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCanalVoz_ad4cc79942d3690f4be462d58dbc5f64b}\label{classCanalVoz_ad4cc79942d3690f4be462d58dbc5f64b}} 
+\index{CanalVoz@{CanalVoz}!setUltimaMensagem@{setUltimaMensagem}}
+\index{setUltimaMensagem@{setUltimaMensagem}!CanalVoz@{CanalVoz}}
+\doxysubsubsection{\texorpdfstring{setUltimaMensagem()}{setUltimaMensagem()}}
+{\footnotesize\ttfamily void Canal\+Voz\+::set\+Ultima\+Mensagem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMensagem}{Mensagem}}}]{ultima\+Mensagem }\end{DoxyParamCaption})}
+
+
+
+Função que altera a última mensagem enviada no canal de voz. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ultima\+Mensagem} & \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{CanalVoz_8h}{Canal\+Voz.\+h}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{CanalVoz_8h}{Canal\+Voz.\+h}}\item 
+src/\mbox{\hyperlink{CanalVoz_8cpp}{Canal\+Voz.\+cpp}}\end{DoxyCompactItemize}

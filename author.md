@@ -31,14 +31,14 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 ## Funcionalidades (parte 2)
 
 **B1 - Gestão de canais**
-- [] Listar canais do Servidor
-- [] Criar um canal no servidor
-- [] Entrar em um canal do servidor
-- [] Sair do canal
+- [x] Listar canais do Servidor
+- [x] Criar um canal no servidor
+- [x] Entrar em um canal do servidor
+- [x] Sair do canal
 
 **B2 - Gestão de mensagens**
-- [] Enviar mensagem para o canal
-- [] Visualizar mensagens do canal
+- [x] Enviar mensagem para o canal
+- [x] Visualizar mensagens do canal
 
 
 ## Funcionalidades (parte 3)

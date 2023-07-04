@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Usuario.h"
 #include <vector>
+#include <time.h>
 
 
 /**
@@ -44,6 +45,22 @@ int Sistema::getusuarios(){
  */
 int Sistema::getServidores(){
     return servidores.size();
+}
+
+
+
+/**
+ * @brief Função que retorna o nome do usuário
+ * 
+ * @return string
+ */
+std::string Sistema::getUsuario(int idUsuario){
+    for(int i = 0; i < getusuarios(); i++){
+        if(usuarios[i].getId() == idUsuario){
+            return usuarios[i].getNome();
+        }
+    }
+    return "";
 }
 
 /**
@@ -295,4 +312,187 @@ std::string Sistema::list_participants(){
         }
     }
     return "Servidor não encontrado!";
+}
+
+/**
+ * @brief Função que representa o comando para listar os canais do servidor atual
+ * 
+ * @return std::string 
+ */
+std::string Sistema::list_channels(){
+    verify_login(usuarioLogadoId);
+    for (int i = 0; i < getServidores(); i++){
+        if (servidores[i].getNome() == servidorAtual){
+            std::string lista = "#canais de texto\n";
+            for(int j = 0; j < servidores[i].getCanaisTextoSize(); j++){
+                lista += servidores[i].getCanaisTexto()[j].getNome() + "\n";
+            }
+            lista += "#canais de voz\n";
+            for(int j = 0; j < servidores[i].getCanaisVozSize(); j++){
+                if(j == servidores[i].getCanaisVozSize() - 1){
+                    lista += servidores[i].getCanaisVoz()[j].getNome();
+                    break;
+                }
+                lista += servidores[i].getCanaisVoz()[j].getNome() + "\n";
+            }
+            return lista;
+        }
+    }
+    return "Você não está em um servidor!";
+}
+
+/**
+ * @brief Função que representa o comando para criar um canal no servidor atual
+ * 
+ * @param nome 
+ * @return std::string 
+ */
+std::string Sistema::create_channel(std::string nome, std::string tipo){
+    verify_login(usuarioLogadoId);
+    for(int i = 0; i < getServidores(); i++){
+        if(servidores[i].getNome() == servidorAtual){
+            if(servidores[i].getDonoID() != usuarioLogadoId){
+                return "Você não é o dono do servidor!";
+            }
+            if(tipo == "texto"){
+                CanalTexto canal(nome);
+                servidores[i].addCanalTexto(canal);
+                return "Canal de texto criado com sucesso!";
+            }
+            else if(tipo == "voz"){
+                CanalVoz canal(nome);
+                servidores[i].addCanalVoz(canal);
+                return "Canal de voz criado com sucesso!";
+            }
+            else{
+                return "Tipo de canal inválido!";
+            }
+        }
+    }
+    return "Você não está em um servidor!";
+}
+
+/**
+ * @brief Função que representa o comando para entrar em um canal do servidor atual
+ * 
+ * @param nome 
+ * @return std::string 
+ */
+std::string Sistema::enter_channel(std::string nome){
+    verify_login(usuarioLogadoId);
+    for(int i = 0; i < getServidores(); i++){
+        if(servidores[i].getNome() == servidorAtual){
+            for(int j = 0; j < servidores[i].getCanaisSize(); j++){
+                if(servidores[i].getCanais()[j].getNome() == nome){
+                    canalAtual = nome;
+                    return "Entrou no canal com sucesso!";
+                }
+            }
+            return "Canal não encontrado!";
+        }
+    }
+    return "Você não está em um servidor!";
+}
+
+/**
+ * @brief Função que representa o comando para sair de um canal do servidor atual
+ * 
+ * @return std::string 
+ */
+std::string Sistema::leave_channel(){
+    verify_login(usuarioLogadoId);
+    if(servidorAtual == ""){
+        return "Você não está em um servidor!";
+    }
+    if(canalAtual != ""){
+        canalAtual = "";
+        return "Saindo do canal...";
+    }
+    return "Você não está em um canal!";
+    
+}
+
+/**
+ * @brief Função que representa o comando para enviar uma mensagem no canal atual
+ * 
+ * @param mensagem 
+ * @return std::string 
+ */
+std::string Sistema::send_message(std::string mensagem){
+    verify_login(usuarioLogadoId);
+    if(servidorAtual == ""){
+        return "Você não está em um servidor!";
+    }
+    if(canalAtual == ""){
+        return "Você não está em um canal!";
+    }
+    struct tm *data_hora_atual;
+    time_t segundos;
+    time(&segundos);
+    data_hora_atual = localtime(&segundos);
+    std::string datahora = "<" + std::to_string(data_hora_atual->tm_mday) + "/" + std::to_string(data_hora_atual->tm_mon + 1) + "/" + std::to_string(data_hora_atual->tm_year + 1900) + " - " + std::to_string(data_hora_atual->tm_hour) + ":" + std::to_string(data_hora_atual->tm_min) + ":" + std::to_string(data_hora_atual->tm_sec) + ">";
+    Mensagem msg(usuarioLogadoId, datahora, mensagem);
+
+    for(int i = 0; i < getServidores(); i++){
+        if(servidores[i].getNome() == servidorAtual){
+            for(int j = 0; j < servidores[i].getCanaisSize(); j++){
+                if(servidores[i].getCanaisVoz()[j].getNome() == canalAtual){
+                    servidores[i].addMensagens_v(msg, canalAtual);
+                    
+                    return "Mensagem enviada com sucesso!";
+                }
+                if(servidores[i].getCanaisTexto()[j].getNome() == canalAtual){
+                    servidores[i].addMensagens_t(msg, canalAtual);
+                    
+                    return "Mensagem enviada com sucesso!";
+                }
+            }
+        }
+    }
+    return "";
+}
+
+/**
+ * @brief Função que representa o comando para listar as mensagens do canal atual
+ * 
+ * @return std::string 
+ */
+std::string Sistema::list_messages(){
+    verify_login(usuarioLogadoId);
+    if(servidorAtual == ""){
+        return "Você não está em um servidor!";
+    }
+    if(canalAtual == ""){
+        return "Você não está em um canal!";
+    }
+    
+    for(int i = 0; i < getServidores(); i++){
+        if(servidores[i].getNome() == servidorAtual){
+            for(int j = 0; j < servidores[i].getCanaisSize(); j++){
+                if(servidores[i].getCanaisVoz()[j].getNome() == canalAtual){
+                    std::string ultmensagem = "";
+                    ultmensagem += getUsuario(servidores[i].getCanaisVoz()[j].getUltimaMensagem().getEnviadaPor()) + servidores[i].getCanaisVoz()[j].getUltimaMensagem().getDataHora() + ": " + servidores[i].getCanaisVoz()[j].getUltimaMensagem().getConteudo();
+                    if(ultmensagem == ": " || ultmensagem == ""){
+                        return "Não há mensagens!";
+                    }
+                    return ultmensagem;
+                }
+                if(servidores[i].getCanaisTexto()[j].getNome() == canalAtual){
+                    std::string lista = "";
+                    for(int k = 0; k < servidores[i].getCanaisTexto()[j].getMensagensSize(); k++){
+                        if(k == servidores[i].getCanaisTexto()[j].getMensagensSize() - 1){
+                            lista += getUsuario(servidores[i].getCanaisTexto()[j].getMensagens()[k].getEnviadaPor()) + servidores[i].getCanaisTexto()[j].getMensagens()[k].getDataHora() + ": " + servidores[i].getCanaisTexto()[j].getMensagens()[k].getConteudo();
+                            break;
+                        }
+                        lista += getUsuario(servidores[i].getCanaisTexto()[j].getMensagens()[k].getEnviadaPor()) + servidores[i].getCanaisTexto()[j].getMensagens()[k].getDataHora() + ": " + servidores[i].getCanaisTexto()[j].getMensagens()[k].getConteudo() + "\n";
+                    }
+                    if(lista == ": " || lista == ""){
+                        return "Não há mensagens!";
+                    }  
+                    return lista;
+                }
+            }
+        }
+    }
+    return "";
 }

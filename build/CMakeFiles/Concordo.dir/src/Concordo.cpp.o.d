@@ -154,8 +154,10 @@ CMakeFiles/Concordo.dir/src/Concordo.cpp.o: \
  /usr/include/c++/11/bits/vector.tcc \
  /home/levingu/Documentos/Concordo/include/Sistema.h \
  /home/levingu/Documentos/Concordo/include/Canal.h \
- /home/levingu/Documentos/Concordo/include/Usuario.h \
  /home/levingu/Documentos/Concordo/include/Mensagem.h \
+ /home/levingu/Documentos/Concordo/include/CanalTexto.h \
+ /home/levingu/Documentos/Concordo/include/CanalVoz.h \
+ /home/levingu/Documentos/Concordo/include/Usuario.h \
  /home/levingu/Documentos/Concordo/include/Servidor.h \
  /home/levingu/Documentos/Concordo/include/Executor.h \
  /home/levingu/Documentos/Concordo/include/Sistema.h

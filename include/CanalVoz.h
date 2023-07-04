@@ -19,7 +19,15 @@
  * 
  */
 class CanalVoz : public Canal{
+    public:
     Mensagem ultimaMensagem; //!< Mensagem que aramazena todos os atributos da última mensagem enviada no canal de voz
+    
+        CanalVoz(std::string nome);
+
+        std::string getTipo();
+
+        Mensagem getUltimaMensagem();
+        void setUltimaMensagem(Mensagem ultimaMensagem);
 };
 
 #endif

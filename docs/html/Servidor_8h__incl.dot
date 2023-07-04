@@ -14,4 +14,8 @@ digraph "include/Servidor.h"
   Node5 [label="Canal.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Canal_8h.html",tooltip="Definição da classe Canal."];
   Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Mensagem.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Mensagem_8h.html",tooltip="Definição da classe Mensagem."];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

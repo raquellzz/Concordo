@@ -20,24 +20,24 @@ Diagrama de colaboração para Canal\+Texto\+:
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCanalTexto_ae2b63bebfe0367db3f20b1abf08f35c7}\label{classCanalTexto_ae2b63bebfe0367db3f20b1abf08f35c7}} 
-\mbox{\hyperlink{classCanalTexto_ae2b63bebfe0367db3f20b1abf08f35c7}{Canal\+Texto}} ()
-\begin{DoxyCompactList}\small\item\em Construtor vazio de um canal de texto. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCanalTexto_ad97a161f2ed2257a6aee4a7edacbd4ad}{Canal\+Texto}} (std\+::string \mbox{\hyperlink{classCanal_ac5e6d80712597bacacd46c0d153c2644}{nome}})
 \begin{DoxyCompactList}\small\item\em Construtor de canal de texto com atributos. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCanalTexto_a8381833429deb1cebcd180108c5b1d44}\label{classCanalTexto_a8381833429deb1cebcd180108c5b1d44}} 
-std\+::vector$<$ \mbox{\hyperlink{classMensagem}{Mensagem}} $>$ {\bfseries get\+Mensagens} ()
-\item 
-\mbox{\Hypertarget{classCanalTexto_ae77022285a55218949ed21785d9f9942}\label{classCanalTexto_ae77022285a55218949ed21785d9f9942}} 
-void {\bfseries set\+Mensagens} (std\+::vector$<$ \mbox{\hyperlink{classMensagem}{Mensagem}} $>$ \mbox{\hyperlink{classCanalTexto_affb8d63a2557ecdb20f8bde47a0f26b9}{mensagens}})
-\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Privados}
+std\+::string \mbox{\hyperlink{classCanalTexto_a7aac61bd97239f40fa9500579017e16a}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o tipo de um canal de texto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCanalTexto_a77dedb2895264e2d69d69eaeecf82a6e}{get\+Mensagens\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de mensagens de um canal de texto. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classMensagem}{Mensagem}} $>$ \mbox{\hyperlink{classCanalTexto_a0e564c2ccea858f61ff8baeb46ed8672}{get\+Mensagens}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna todas as mensagens de um canal de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanalTexto_ae77022285a55218949ed21785d9f9942}{set\+Mensagens}} (std\+::vector$<$ \mbox{\hyperlink{classMensagem}{Mensagem}} $>$ \mbox{\hyperlink{classCanalTexto_affb8d63a2557ecdb20f8bde47a0f26b9}{mensagens}})
+\begin{DoxyCompactList}\small\item\em Função que altera todas as mensagens de um canal de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCanalTexto_ab238d6bf1825e54d38307cdf8b588b74}{add\+Mensagem}} (\mbox{\hyperlink{classMensagem}{Mensagem}} mensagem)
+\begin{DoxyCompactList}\small\item\em Função que adiciona uma mensagem a um canal de texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classCanalTexto_affb8d63a2557ecdb20f8bde47a0f26b9}\label{classCanalTexto_affb8d63a2557ecdb20f8bde47a0f26b9}} 
 std\+::vector$<$ \mbox{\hyperlink{classMensagem}{Mensagem}} $>$ \mbox{\hyperlink{classCanalTexto_affb8d63a2557ecdb20f8bde47a0f26b9}{mensagens}}
 \begin{DoxyCompactList}\small\item\em Armazena todas as mensagens enviadas no canal de texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Outros membros herdados}
 
 
 \doxysubsection{Descrição detalhada}
@@ -57,6 +57,78 @@ Construtor de canal de texto com atributos.
 
 \begin{DoxyParams}{Parâmetros}
 {\em nome} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classCanalTexto_ab238d6bf1825e54d38307cdf8b588b74}\label{classCanalTexto_ab238d6bf1825e54d38307cdf8b588b74}} 
+\index{CanalTexto@{CanalTexto}!addMensagem@{addMensagem}}
+\index{addMensagem@{addMensagem}!CanalTexto@{CanalTexto}}
+\doxysubsubsection{\texorpdfstring{addMensagem()}{addMensagem()}}
+{\footnotesize\ttfamily void Canal\+Texto\+::add\+Mensagem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMensagem}{Mensagem}}}]{mensagem }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona uma mensagem a um canal de texto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mensagem} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCanalTexto_a0e564c2ccea858f61ff8baeb46ed8672}\label{classCanalTexto_a0e564c2ccea858f61ff8baeb46ed8672}} 
+\index{CanalTexto@{CanalTexto}!getMensagens@{getMensagens}}
+\index{getMensagens@{getMensagens}!CanalTexto@{CanalTexto}}
+\doxysubsubsection{\texorpdfstring{getMensagens()}{getMensagens()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classMensagem}{Mensagem}} $>$ Canal\+Texto\+::get\+Mensagens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna todas as mensagens de um canal de texto. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+Mensagem$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCanalTexto_a77dedb2895264e2d69d69eaeecf82a6e}\label{classCanalTexto_a77dedb2895264e2d69d69eaeecf82a6e}} 
+\index{CanalTexto@{CanalTexto}!getMensagensSize@{getMensagensSize}}
+\index{getMensagensSize@{getMensagensSize}!CanalTexto@{CanalTexto}}
+\doxysubsubsection{\texorpdfstring{getMensagensSize()}{getMensagensSize()}}
+{\footnotesize\ttfamily int Canal\+Texto\+::get\+Mensagens\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de mensagens de um canal de texto. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCanalTexto_a7aac61bd97239f40fa9500579017e16a}\label{classCanalTexto_a7aac61bd97239f40fa9500579017e16a}} 
+\index{CanalTexto@{CanalTexto}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!CanalTexto@{CanalTexto}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily std\+::string Canal\+Texto\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o tipo de um canal de texto. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCanalTexto_ae77022285a55218949ed21785d9f9942}\label{classCanalTexto_ae77022285a55218949ed21785d9f9942}} 
+\index{CanalTexto@{CanalTexto}!setMensagens@{setMensagens}}
+\index{setMensagens@{setMensagens}!CanalTexto@{CanalTexto}}
+\doxysubsubsection{\texorpdfstring{setMensagens()}{setMensagens()}}
+{\footnotesize\ttfamily void Canal\+Texto\+::set\+Mensagens (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classMensagem}{Mensagem}} $>$}]{mensagens }\end{DoxyParamCaption})}
+
+
+
+Função que altera todas as mensagens de um canal de texto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mensagens} & \\
 \hline
 \end{DoxyParams}
 

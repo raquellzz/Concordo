@@ -19,13 +19,17 @@
  * 
  */
 class CanalTexto : public Canal {
-    std::vector<Mensagem> mensagens; //!< Armazena todas as mensagens enviadas no canal de texto
     public:
-        CanalTexto();
+    std::vector<Mensagem> mensagens; //!< Armazena todas as mensagens enviadas no canal de texto
+    
         CanalTexto(std::string nome);
+
+        std::string getTipo();
+        int getMensagensSize();
 
         std::vector<Mensagem> getMensagens();
         void setMensagens(std::vector<Mensagem> mensagens);
+        void addMensagem(Mensagem mensagem);
 };
 
 #endif

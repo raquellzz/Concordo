@@ -8,34 +8,163 @@
 \item \href{\#pessoas-desenvolvedoras-do-projeto}{\texttt{ Pessoas Desenvolvedoras do Projeto}}
 \end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysection{Descrição do Projeto}\label{md_README_autotoc_md7}
 O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de programação C++ no desenvolvimento de um sistema de comunidades, denominado Concordo, com recursos similares ao Discord.\hypertarget{md_README_autotoc_md8}{}\doxysection{Roteiro de Entradas e Saídas}\label{md_README_autotoc_md8}
-Essas são as possibildiades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades\+:
+O sistema pode receber os seguintes comandos\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{quit}
+\DoxyCodeLine{}
+\DoxyCodeLine{create-\/user <email> <senha\_sem\_espaços> <nome com espaços>}
+\DoxyCodeLine{}
+\DoxyCodeLine{login <email> <senha>}
+\DoxyCodeLine{}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{}
+\DoxyCodeLine{create-\/server <nome>}
+\DoxyCodeLine{}
+\DoxyCodeLine{set-\/server-\/desc <nome> <descrição>}
+\DoxyCodeLine{}
+\DoxyCodeLine{set-\/server-\/invite-\/code <nome> <código>}
+\DoxyCodeLine{}
+\DoxyCodeLine{list-\/servers }
+\DoxyCodeLine{}
+\DoxyCodeLine{remove-\/server <nome>}
+\DoxyCodeLine{}
+\DoxyCodeLine{enter-\/server <nome> <código>}
+\DoxyCodeLine{}
+\DoxyCodeLine{list-\/participants}
+
+\end{DoxyCode}
+
+
+Essas são as possibilidades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades\+:
 
 Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.
 
-Os outputs estão caracterizados a seguir com o símbolo $>$ 
+Note que outputs estão caracterizados a seguir com o símbolo \char`\"{}$>$\char`\"{} apenas para facilitar a compreensão das entradas e saídas, no terminal não possui esse símbolo antes de cada saída. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{create-\/user marc@gmail senha1234 }
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Dados inválidos.}
 \DoxyCodeLine{create-\/user raquel@gmail senha123 raquel freire}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Usuário criado com sucesso!}
 \DoxyCodeLine{create-\/user marc@gmail senha1234 Marcos B}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Usuário criado com sucesso!}
 \DoxyCodeLine{login raquel@gmail senhaErrada}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Senha incorreta!}
 \DoxyCodeLine{login raquel@gmail senha123}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Logado como raquel@gmail!}
 \DoxyCodeLine{create-\/server deus}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Servidor criado com sucesso!}
+\DoxyCodeLine{create-\/server spa}
+\DoxyCodeLine{>Servidor criado com sucesso!}
 \DoxyCodeLine{set-\/server-\/desc deus amem}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Descrição adicionada com sucesso!}
 \DoxyCodeLine{set-\/server-\/invite-\/code deus bora}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Código de convite adicionado com sucesso!}
 \DoxyCodeLine{disconnect}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Desconectado com sucesso!}
 \DoxyCodeLine{login marc@gmail senha1234}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Logado como marc@gmail!}
+\DoxyCodeLine{list-\/servers}
+\DoxyCodeLine{>deus}
+\DoxyCodeLine{>spa}
+\DoxyCodeLine{enter-\/server deus}
+\DoxyCodeLine{>Código de convite inválido!}
+\DoxyCodeLine{enter-\/server deus bora}
+\DoxyCodeLine{>Entrou no servidor com sucesso!}
+\DoxyCodeLine{list-\/participants}
+\DoxyCodeLine{>raquel freire}
+\DoxyCodeLine{>Marcos B}
+\DoxyCodeLine{remove-\/server deus}
+\DoxyCodeLine{>Você não é o dono do servidor!}
+\DoxyCodeLine{leave-\/server}
+\DoxyCodeLine{>Saindo do servidor...}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{>Desconectado com sucesso!}
+\DoxyCodeLine{login raquel@gmail senha123}
+\DoxyCodeLine{>Logado como raquel@gmail!}
+\DoxyCodeLine{remove-\/server deus}
+\DoxyCodeLine{>Servidor removido com sucesso!}
+\DoxyCodeLine{list-\/servers}
+\DoxyCodeLine{>spa}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{>Desconectado com sucesso!}
 \DoxyCodeLine{quit}
-\DoxyCodeLine{>}
+\DoxyCodeLine{>Saindo do Concordo...}
+
+\end{DoxyCode}
+ A seguir estão as possibilidades do programa para testar as funcionalidades da parte 2\+:
+
+Note que quando a mensagem é mostrada, a parte de data e hora está de maneira generalizada no formato \char`\"{}$<$dia/mês/ano -\/ horas\+:minutos\+:segundos$>$\char`\"{}, mas quando o programa estiver rodando, será impresso as informações características do momento em que o programa está sendoe executado.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{create-\/user raquel@gmail senha123 raquel freire}
+\DoxyCodeLine{>Usuário criado com sucesso!}
+\DoxyCodeLine{create-\/user marc@gmail senha1234 Marcos B}
+\DoxyCodeLine{>Usuário criado com sucesso!}
+\DoxyCodeLine{login raquel@gmail senha123}
+\DoxyCodeLine{>Logado como raquel@gmail!}
+\DoxyCodeLine{create-\/server deus}
+\DoxyCodeLine{>Servidor criado com sucesso!}
+\DoxyCodeLine{create-\/channel jogos voz}
+\DoxyCodeLine{>Canal de voz criado com sucesso!}
+\DoxyCodeLine{create-\/channel cafezinho texto}
+\DoxyCodeLine{>Canal de texto criado com sucesso!}
+\DoxyCodeLine{list-\/channels}
+\DoxyCodeLine{>\#canais de texto}
+\DoxyCodeLine{>cafezinho}
+\DoxyCodeLine{>\#canais de voz}
+\DoxyCodeLine{>jogos}
+\DoxyCodeLine{enter-\/channel jogos}
+\DoxyCodeLine{>Entrou no canal com sucesso!}
+\DoxyCodeLine{list-\/messages}
+\DoxyCodeLine{>Não há mensagens!}
+\DoxyCodeLine{send-\/message vamo jogar agora ou mais tarde??}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{list-\/messages}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: vamo jogar agora ou mais tarde??}
+\DoxyCodeLine{leave-\/channel}
+\DoxyCodeLine{>Saindo do canal...}
+\DoxyCodeLine{enter-\/channel cafezinho}
+\DoxyCodeLine{>Entrou no canal com sucesso!}
+\DoxyCodeLine{send-\/message caramba, boy}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{send-\/message que ódio desse cara}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{send-\/message amei as fofocas de hoje}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{list-\/messages}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: caramba, boy}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: que ódio desse cara}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: amei as fofocas de hoje}
+\DoxyCodeLine{leave-\/channel}
+\DoxyCodeLine{>Saindo do Canal...}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{>Desconectado com sucesso!}
+\DoxyCodeLine{login marc@gmail senha1234}
+\DoxyCodeLine{>Logado como marc@gmail!}
+\DoxyCodeLine{enter-\/server deus}
+\DoxyCodeLine{>Entrou no servidor com sucesso!}
+\DoxyCodeLine{enter-\/channel cafezinho}
+\DoxyCodeLine{>Entrou no canal com sucesso!}
+\DoxyCodeLine{list-\/messages}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: caramba, boy}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: que ódio desse cara}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: amei as fofocas de hoje}
+\DoxyCodeLine{send-\/message também adoreeei}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{list-\/messages}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: caramba, boy}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: que ódio desse cara}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: amei as fofocas de hoje}
+\DoxyCodeLine{>Marcos B<dia/mês/ano -\/ horas:minutos:segundos>: também adoreeei}
+\DoxyCodeLine{leave-\/channel}
+\DoxyCodeLine{>Saindo do Canal...}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{>Desconectado com sucesso!}
+\DoxyCodeLine{quit}
+\DoxyCodeLine{>Saindo do Concordo...}
 
 \end{DoxyCode}
 \hypertarget{md_README_autotoc_md9}{}\doxysection{Acesso ao Projeto e Compilação}\label{md_README_autotoc_md9}

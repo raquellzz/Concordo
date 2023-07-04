@@ -178,5 +178,40 @@ std::string Executor::LeituraComandos(std::string linha, Sistema *sistema){
     else if(comando == "list-participants"){
         return sistema->list_participants();
     }
+    else if(comando == "list-channels"){
+        return sistema->list_channels();
+    }
+    else if(comando == "create-channel"){
+        std::string nome;
+        std::string tipo;
+        int i = 0;
+        for(auto c: resto){
+            if(c == ' '){
+                i++;
+                continue;
+            }
+            if(i == 0){
+                nome += c;
+            }
+            else if(i == 1){
+                tipo += c;
+            }
+        }
+        return sistema->create_channel(nome, tipo);
+    }
+    else if(comando == "enter-channel"){
+        return sistema->enter_channel(resto);
+    }
+    else if(comando == "leave-channel"){
+        return sistema->leave_channel();
+    }
+    else if(comando == "send-message"){
+        return sistema->send_message(resto);
+    }
+    else if(comando == "list-messages"){
+        return sistema->list_messages();
+    }
+    
     return "Comando invalido";
 }
+

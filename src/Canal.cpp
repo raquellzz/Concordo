@@ -1,22 +1,30 @@
+/**
+ * @file Canal.cpp
+ * @brief Implementação dos métodos da classe Canal.
+ * 
+ */
+
 #include "Canal.h"
 
-//construtor vazio
-Canal::Canal() {
-    this->nome = "";
-}
-
-//construtor com atributos
-Canal::Canal(std::string nome) {
-    this->nome = nome;
-}
 
 
-//função que retorna o nome do canal
+/**
+ * @brief Função que retorna o nome do canal
+ * 
+ * @return std::string 
+ */
 std::string Canal::getNome() {
     return this->nome;
 }
 
-//função que define o nome do canal
+
+/**
+ * @brief Função que define o nome do canal
+ * 
+ * @param nome 
+ */
 void Canal::setNome(std::string nome) {
     this->nome = nome;
 }
+
+ 

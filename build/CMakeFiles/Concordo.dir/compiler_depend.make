@@ -178,7 +178,8 @@ CMakeFiles/Concordo.dir/src/Canal.cpp.o: ../src/Canal.cpp \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  ../include/Mensagem.h
 
 CMakeFiles/Concordo.dir/src/CanalTexto.cpp.o: ../src/CanalTexto.cpp \
   /usr/include/stdc-predef.h \
@@ -741,8 +742,10 @@ CMakeFiles/Concordo.dir/src/Concordo.cpp.o: ../src/Concordo.cpp \
   /usr/include/c++/11/bits/vector.tcc \
   ../include/Sistema.h \
   ../include/Canal.h \
-  ../include/Usuario.h \
   ../include/Mensagem.h \
+  ../include/CanalTexto.h \
+  ../include/CanalVoz.h \
+  ../include/Usuario.h \
   ../include/Servidor.h \
   ../include/Executor.h \
   ../include/Sistema.h
@@ -932,8 +935,10 @@ CMakeFiles/Concordo.dir/src/Executor.cpp.o: ../src/Executor.cpp \
   ../include/Executor.h \
   ../include/Sistema.h \
   ../include/Canal.h \
-  ../include/Usuario.h \
   ../include/Mensagem.h \
+  ../include/CanalTexto.h \
+  ../include/CanalVoz.h \
+  ../include/Usuario.h \
   ../include/Servidor.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -1303,8 +1308,11 @@ CMakeFiles/Concordo.dir/src/Servidor.cpp.o: ../src/Servidor.cpp \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   ../include/Canal.h \
-  ../include/Servidor.h \
-  ../include/Canal.h
+  ../include/Mensagem.h \
+  ../include/CanalTexto.h \
+  ../include/Canal.h \
+  ../include/CanalVoz.h \
+  ../include/Servidor.h
 
 CMakeFiles/Concordo.dir/src/Sistema.cpp.o: ../src/Sistema.cpp \
   /usr/include/stdc-predef.h \
@@ -1490,8 +1498,10 @@ CMakeFiles/Concordo.dir/src/Sistema.cpp.o: ../src/Sistema.cpp \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   ../include/Canal.h \
-  ../include/Usuario.h \
   ../include/Mensagem.h \
+  ../include/CanalTexto.h \
+  ../include/CanalVoz.h \
+  ../include/Usuario.h \
   ../include/Servidor.h \
   ../include/Usuario.h
 
@@ -1697,8 +1707,6 @@ CMakeFiles/Concordo.dir/src/Usuario.cpp.o: ../src/Usuario.cpp \
 
 ../src/Concordo.cpp:
 
-../include/Mensagem.h:
-
 /usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/c++/11/bits/stl_bvector.h:
@@ -1710,6 +1718,8 @@ CMakeFiles/Concordo.dir/src/Usuario.cpp.o: ../src/Usuario.cpp \
 ../include/CanalTexto.h:
 
 ../src/CanalTexto.cpp:
+
+../include/Mensagem.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 

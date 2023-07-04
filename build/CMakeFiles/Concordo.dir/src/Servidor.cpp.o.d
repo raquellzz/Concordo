@@ -152,5 +152,8 @@ CMakeFiles/Concordo.dir/src/Servidor.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /home/levingu/Documentos/Concordo/include/Canal.h \
- /home/levingu/Documentos/Concordo/include/Servidor.h \
- /home/levingu/Documentos/Concordo/include/Canal.h
+ /home/levingu/Documentos/Concordo/include/Mensagem.h \
+ /home/levingu/Documentos/Concordo/include/CanalTexto.h \
+ /home/levingu/Documentos/Concordo/include/Canal.h \
+ /home/levingu/Documentos/Concordo/include/CanalVoz.h \
+ /home/levingu/Documentos/Concordo/include/Servidor.h

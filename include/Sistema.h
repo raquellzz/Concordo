@@ -13,6 +13,8 @@
 #include <iostream>
 #include <vector>
 #include "Canal.h"
+#include "CanalTexto.h"
+#include "CanalVoz.h"
 #include "Usuario.h"
 #include "Mensagem.h"
 #include "Servidor.h"
@@ -36,6 +38,8 @@ public:
     int getId();
     int getusuarios();
     int getServidores();
+    
+    std::string getUsuario(int idUsuario);
     std::string verify_login(int usuarioLogadoId);
     std::string quit();
     std::string create_user (const std::string email, const std::string senha, const std::string nome);
@@ -49,6 +53,12 @@ public:
     std::string enter_server (std::string nome, std::string codigo);
     std::string leave_server();
     std::string list_participants();
+    std::string list_channels();
+    std::string create_channel(std::string nome, std::string tipo);
+    std::string enter_channel(std::string nome);
+    std::string leave_channel();
+    std::string send_message(std::string mensagem);
+    std::string list_messages();
 };
 
 #endif

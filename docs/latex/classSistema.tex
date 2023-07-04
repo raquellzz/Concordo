@@ -21,6 +21,8 @@ int \mbox{\hyperlink{classSistema_a760b2bb950136842675dc78551b6c60e}{getusuarios
 \begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de usuários cadastrados. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSistema_a841b2da930cbc8f7c67a12a610343f96}{get\+Servidores}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de servidores criados. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSistema_af39f532f4d183a7bb7c05286de49957f}{get\+Usuario}} (int id\+Usuario)
+\begin{DoxyCompactList}\small\item\em Função que retorna o nome do usuário. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSistema_a7630523e29e3824fe10e295ea777c5c5}{verify\+\_\+login}} (int \mbox{\hyperlink{classSistema_ad911bf2bc2c60b551f00a99abc5aa318}{usuario\+Logado\+Id}})
 \begin{DoxyCompactList}\small\item\em Função que verifica se há um usuário logado. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSistema_a51c30402d0bd81bce960109390c591cc}{quit}} ()
@@ -46,7 +48,19 @@ std\+::string \mbox{\hyperlink{classSistema_ad671163b1c5e5e6dff6b234e45660d4b}{e
 std\+::string \mbox{\hyperlink{classSistema_a31640e412d39b9f03edb3d5fd4452dac}{leave\+\_\+server}} ()
 \begin{DoxyCompactList}\small\item\em Função que representa o comando para deslogar de um servidor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSistema_a5281ed41ad03b7edca07c61f64075e8f}{list\+\_\+participants}} ()
-\begin{DoxyCompactList}\small\item\em Função que representa o comando para listar os participantes do servidor atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função que representa o comando para listar os participantes do servidor atual. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSistema_a4f76f96c736929c226ade3bdee9fcffd}{list\+\_\+channels}} ()
+\begin{DoxyCompactList}\small\item\em Função que representa o comando para listar os canais do servidor atual. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSistema_a9aff0a4b6c00f8c3e4609c1751a96459}{create\+\_\+channel}} (std\+::string nome, std\+::string tipo)
+\begin{DoxyCompactList}\small\item\em Função que representa o comando para criar um canal no servidor atual. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSistema_ad2b2132eea3d9538408f603b9c27a368}{enter\+\_\+channel}} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Função que representa o comando para entrar em um canal do servidor atual. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSistema_aaebf015cdbc59c61773e8a652c6b0672}{leave\+\_\+channel}} ()
+\begin{DoxyCompactList}\small\item\em Função que representa o comando para sair de um canal do servidor atual. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSistema_a77a2cfb2d5d3407d9dcefb344f3ffc67}{send\+\_\+message}} (std\+::string mensagem)
+\begin{DoxyCompactList}\small\item\em Função que representa o comando para enviar uma mensagem no canal atual. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSistema_a70a279885f5b5ad6a6f50b4a682b46d9}{list\+\_\+messages}} ()
+\begin{DoxyCompactList}\small\item\em Função que representa o comando para listar as mensagens do canal atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -77,6 +91,24 @@ int \mbox{\hyperlink{classSistema_a69ba5e2cce55afc2a47d899a1100a42a}{id}} = 0
 Classe que representa o sistema. 
 
 \doxysubsection{Funções membros}
+\mbox{\Hypertarget{classSistema_a9aff0a4b6c00f8c3e4609c1751a96459}\label{classSistema_a9aff0a4b6c00f8c3e4609c1751a96459}} 
+\index{Sistema@{Sistema}!create\_channel@{create\_channel}}
+\index{create\_channel@{create\_channel}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{create\_channel()}{create\_channel()}}
+{\footnotesize\ttfamily std\+::string Sistema\+::create\+\_\+channel (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Função que representa o comando para criar um canal no servidor atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSistema_a4e7bddb2218e9e48afc51777dd947433}\label{classSistema_a4e7bddb2218e9e48afc51777dd947433}} 
 \index{Sistema@{Sistema}!create\_server@{create\_server}}
 \index{create\_server@{create\_server}!Sistema@{Sistema}}
@@ -130,6 +162,24 @@ Função que representa o comando para desconectar o usuário do sistema.
 \begin{DoxyReturn}{Retorna}
 std\+::string 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classSistema_ad2b2132eea3d9538408f603b9c27a368}\label{classSistema_ad2b2132eea3d9538408f603b9c27a368}} 
+\index{Sistema@{Sistema}!enter\_channel@{enter\_channel}}
+\index{enter\_channel@{enter\_channel}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{enter\_channel()}{enter\_channel()}}
+{\footnotesize\ttfamily std\+::string Sistema\+::enter\+\_\+channel (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Função que representa o comando para entrar em um canal do servidor atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSistema_ad671163b1c5e5e6dff6b234e45660d4b}\label{classSistema_ad671163b1c5e5e6dff6b234e45660d4b}} 
 \index{Sistema@{Sistema}!enter\_server@{enter\_server}}
 \index{enter\_server@{enter\_server}!Sistema@{Sistema}}
@@ -176,6 +226,19 @@ Função que retorna a quantidade de servidores criados.
 \begin{DoxyReturn}{Retorna}
 int 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classSistema_af39f532f4d183a7bb7c05286de49957f}\label{classSistema_af39f532f4d183a7bb7c05286de49957f}} 
+\index{Sistema@{Sistema}!getUsuario@{getUsuario}}
+\index{getUsuario@{getUsuario}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{getUsuario()}{getUsuario()}}
+{\footnotesize\ttfamily std\+::string Sistema\+::get\+Usuario (\begin{DoxyParamCaption}\item[{int}]{id\+Usuario }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o nome do usuário. 
+
+\begin{DoxyReturn}{Retorna}
+string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSistema_a760b2bb950136842675dc78551b6c60e}\label{classSistema_a760b2bb950136842675dc78551b6c60e}} 
 \index{Sistema@{Sistema}!getusuarios@{getusuarios}}
 \index{getusuarios@{getusuarios}!Sistema@{Sistema}}
@@ -189,6 +252,19 @@ Função que retorna a quantidade de usuários cadastrados.
 \begin{DoxyReturn}{Retorna}
 int 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classSistema_aaebf015cdbc59c61773e8a652c6b0672}\label{classSistema_aaebf015cdbc59c61773e8a652c6b0672}} 
+\index{Sistema@{Sistema}!leave\_channel@{leave\_channel}}
+\index{leave\_channel@{leave\_channel}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{leave\_channel()}{leave\_channel()}}
+{\footnotesize\ttfamily std\+::string Sistema\+::leave\+\_\+channel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que representa o comando para sair de um canal do servidor atual. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classSistema_a31640e412d39b9f03edb3d5fd4452dac}\label{classSistema_a31640e412d39b9f03edb3d5fd4452dac}} 
 \index{Sistema@{Sistema}!leave\_server@{leave\_server}}
 \index{leave\_server@{leave\_server}!Sistema@{Sistema}}
@@ -198,6 +274,32 @@ int
 
 
 Função que representa o comando para deslogar de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSistema_a4f76f96c736929c226ade3bdee9fcffd}\label{classSistema_a4f76f96c736929c226ade3bdee9fcffd}} 
+\index{Sistema@{Sistema}!list\_channels@{list\_channels}}
+\index{list\_channels@{list\_channels}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{list\_channels()}{list\_channels()}}
+{\footnotesize\ttfamily std\+::string Sistema\+::list\+\_\+channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que representa o comando para listar os canais do servidor atual. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSistema_a70a279885f5b5ad6a6f50b4a682b46d9}\label{classSistema_a70a279885f5b5ad6a6f50b4a682b46d9}} 
+\index{Sistema@{Sistema}!list\_messages@{list\_messages}}
+\index{list\_messages@{list\_messages}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{list\_messages()}{list\_messages()}}
+{\footnotesize\ttfamily std\+::string Sistema\+::list\+\_\+messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que representa o comando para listar as mensagens do canal atual. 
 
 \begin{DoxyReturn}{Retorna}
 std\+::string 
@@ -274,6 +376,24 @@ Função que representa o comando para remover um servidor do sistema.
 
 \begin{DoxyParams}{Parâmetros}
 {\em nome} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSistema_a77a2cfb2d5d3407d9dcefb344f3ffc67}\label{classSistema_a77a2cfb2d5d3407d9dcefb344f3ffc67}} 
+\index{Sistema@{Sistema}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!Sistema@{Sistema}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily std\+::string Sistema\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{std\+::string}]{mensagem }\end{DoxyParamCaption})}
+
+
+
+Função que representa o comando para enviar uma mensagem no canal atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mensagem} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}

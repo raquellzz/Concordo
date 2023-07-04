@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 #include "Canal.h"
+#include "CanalTexto.h"
+#include "CanalVoz.h"
 #include "Servidor.h"
 
 /**
@@ -93,6 +95,24 @@ std::vector<Canal> Servidor::getCanais(){
 }
 
 /**
+ * @brief Função que retorna os canais de voz de um servidor
+ * 
+ * @return std::vector<CanalVoz> 
+ */
+std::vector<CanalVoz> Servidor::getCanaisVoz(){
+    return this->canaisVoz;
+}
+
+/**
+ * @brief Função que retorna os canais de texto de um servidor
+ * 
+ * @return std::vector<CanalTexto> 
+ */
+std::vector<CanalTexto> Servidor::getCanaisTexto(){
+    return this->canaisTexto;
+}
+
+/**
  * @brief Função que retorna os ids dos participantes de um servidor
  * 
  * @return std::vector<int> 
@@ -100,6 +120,35 @@ std::vector<Canal> Servidor::getCanais(){
 std::vector<int> Servidor::getParticipantesIDs(){
     return this->participantesIDs;
 }
+
+/**
+ * @brief Função que retorna a quantidade de canais de um servidor
+ * 
+ * @return int 
+ */
+int Servidor::getCanaisSize(){
+    return this->canais.size();
+}
+
+/**
+ * @brief Função que retorna a quantidade de canais de voz de um servidor
+ * 
+ * @return int
+ */
+int Servidor::getCanaisVozSize(){
+    return this->canaisVoz.size();
+}
+
+/**
+ * @brief Função que retorna a quantidade de canais de texto de um servidor
+ * 
+ * @return int
+ */
+int Servidor::getCanaisTextoSize(){
+    return this->canaisTexto.size();
+}
+
+
 
 /**
  * @brief Função que define o id do dono do servidor
@@ -147,6 +196,24 @@ void Servidor::setCanais(std::vector<Canal> canais){
 }
 
 /**
+ * @brief Função que define os canais de voz de um servidor
+ * 
+ * @param canaisVoz 
+ */
+void Servidor::setCanaisVoz(std::vector<CanalVoz> canaisVoz){
+    this->canaisVoz = canaisVoz;
+}
+
+/**
+ * @brief Função que define os canais de texto de um servidor
+ * 
+ * @param canaisTexto 
+ */
+void Servidor::setCanaisTexto(std::vector<CanalTexto> canaisTexto){
+    this->canaisTexto = canaisTexto;
+}
+
+/**
  * @brief Função que define os ids dos participantes de um servidor
  * 
  * @param participantesIDs 
@@ -163,4 +230,50 @@ void Servidor::setParticipantesIDs(std::vector<int> participantesIDs){
  */
 void Servidor::addParticipantesIDs(int participanteID){
     this->participantesIDs.push_back(participanteID);
+}
+
+/**
+ * @brief Função que adiciona um canal de texto na lista de canais do servidor
+ * 
+ * @param canal 
+ */
+void Servidor::addCanalTexto(CanalTexto canal){
+    this->canais.push_back(canal);
+    this->canaisTexto.push_back(canal);
+}
+
+/**
+ * @brief Função que adiciona um canal de voz na lista de canais do servidor
+ * 
+ * @param canal 
+ */
+void Servidor::addCanalVoz(CanalVoz canal){
+    this->canais.push_back(canal);
+    this->canaisVoz.push_back(canal);
+}
+
+/**
+ * @brief Função que adiciona mensagens a um canal de vozdo servidor
+ * 
+ * @param mensagem
+ */
+void Servidor::addMensagens_v(Mensagem mensagem, std::string atual){
+    for(int i = 0; i < getCanaisVozSize(); i++){
+        if(this->canaisVoz[i].getNome() == atual){
+            this->canaisVoz[i].setUltimaMensagem(mensagem);
+        }
+    }
+}
+
+/**
+ * @brief Função que adiciona mensagens a um canal de texto do servidor
+ * 
+ * @param mensagem
+ */
+void Servidor::addMensagens_t(Mensagem mensagem, std::string atual){
+    for(int i = 0; i < getCanaisTextoSize(); i++){
+        if(this->canaisTexto[i].getNome() == atual){
+            this->canaisTexto[i].addMensagem(mensagem);
+        }
+    }
 }

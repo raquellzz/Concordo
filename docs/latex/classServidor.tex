@@ -21,6 +21,12 @@ int \mbox{\hyperlink{classServidor_abc78d331b71facbcda20065f8dcca37e}{getparticp
 \begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de participantes em um servidor. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classServidor_ac9bd9b0e9ec6a1cf884f8b0ba36e76b8}{get\+Dono\+ID}} ()
 \begin{DoxyCompactList}\small\item\em Função que o id do dono de um servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServidor_a5e7e99196239f4cd9f22874f73c0c432}{get\+Canais\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de canais de um servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServidor_aaee4cbb43adf92afaf0ff2f73c88169a}{get\+Canais\+Voz\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de canais de voz de um servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServidor_aec28f887db5acdf574bb36d31e478187}{get\+Canais\+Texto\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de canais de texto de um servidor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classServidor_af094e7503c4fd8e124679f03eae3f0cd}{get\+Nome}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna o nome do servidor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classServidor_a7862d3dc42a161feb7500d8caf7fe25d}{get\+Descricao}} ()
@@ -29,6 +35,10 @@ std\+::string \mbox{\hyperlink{classServidor_a246c9e826a657e9448cac0ed85206f30}{
 \begin{DoxyCompactList}\small\item\em Função que retorna o código de convite de um servidor. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$ \mbox{\hyperlink{classServidor_a2a661d4516c7318f26bef56354f65f1c}{get\+Canais}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna os canais de um servidor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCanalVoz}{Canal\+Voz}} $>$ \mbox{\hyperlink{classServidor_a8eae1b98f4cde161df16c90196bfab93}{get\+Canais\+Voz}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna os canais de voz de um servidor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCanalTexto}{Canal\+Texto}} $>$ \mbox{\hyperlink{classServidor_a89889cd25f86948e2c68f2df7d6abb07}{get\+Canais\+Texto}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna os canais de texto de um servidor. \end{DoxyCompactList}\item 
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classServidor_a5583662547b3e58683dd4382bb2276c0}{get\+Participantes\+IDs}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna os ids dos participantes de um servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServidor_a6ae819312dc3bd799002f92f64fb3b69}{set\+Dono\+ID}} (int usuario\+Dono\+Id)
@@ -41,10 +51,22 @@ void \mbox{\hyperlink{classServidor_a54f4816fb3fc642d398705fc771bef3a}{set\+Codi
 \begin{DoxyCompactList}\small\item\em Função que define o código de convite de um servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServidor_aed1337a3f669f526ab745bbb7b26986d}{set\+Canais}} (std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$ \mbox{\hyperlink{classServidor_a0d9ff033a10e411a79603736d3692b7e}{canais}})
 \begin{DoxyCompactList}\small\item\em Função que define os canais de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a0c1133b923131e7860c4b0129b571d8c}{set\+Canais\+Voz}} (std\+::vector$<$ \mbox{\hyperlink{classCanalVoz}{Canal\+Voz}} $>$ \mbox{\hyperlink{classServidor_a6d40a173f1a6bec3c848dcb693fc8ff2}{canais\+Voz}})
+\begin{DoxyCompactList}\small\item\em Função que define os canais de voz de um servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_aaed21ddc01165e9180ebc1cf61ca5e1b}{set\+Canais\+Texto}} (std\+::vector$<$ \mbox{\hyperlink{classCanalTexto}{Canal\+Texto}} $>$ \mbox{\hyperlink{classServidor_a7861f03269e520a74f481a7e3a42f712}{canais\+Texto}})
+\begin{DoxyCompactList}\small\item\em Função que define os canais de texto de um servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServidor_aedddb5a7c5f851d083cb9ada9783fa5a}{set\+Participantes\+IDs}} (std\+::vector$<$ int $>$ \mbox{\hyperlink{classServidor_ac26153c0e4ee691298741be313624ea9}{participantes\+IDs}})
 \begin{DoxyCompactList}\small\item\em Função que define os ids dos participantes de um servidor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classServidor_a675cf834a519ae1f6fb05d9ea4a2ea5d}{add\+Participantes\+IDs}} (int participante\+ID)
-\begin{DoxyCompactList}\small\item\em Função que adiciona o id de um participante na lista de participantes do servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função que adiciona o id de um participante na lista de participantes do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a81eb6737b987b7ca8eac10ffa2060aa8}{add\+Canal\+Texto}} (\mbox{\hyperlink{classCanalTexto}{Canal\+Texto}} canal)
+\begin{DoxyCompactList}\small\item\em Função que adiciona um canal de texto na lista de canais do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a8c447eb1393a5b50938988e08b8e0558}{add\+Canal\+Voz}} (\mbox{\hyperlink{classCanalVoz}{Canal\+Voz}} canal)
+\begin{DoxyCompactList}\small\item\em Função que adiciona um canal de voz na lista de canais do servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a51b5a60d2adb3a696f0581e0a3f4f315}{add\+Mensagens\+\_\+v}} (\mbox{\hyperlink{classMensagem}{Mensagem}} mensagem, std\+::string atual)
+\begin{DoxyCompactList}\small\item\em Função que adiciona mensagens a um canal de vozdo servidor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServidor_a54b33e338390503a86283016c3a3c091}{add\+Mensagens\+\_\+t}} (\mbox{\hyperlink{classMensagem}{Mensagem}} mensagem, std\+::string atual)
+\begin{DoxyCompactList}\small\item\em Função que adiciona mensagens a um canal de texto do servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,6 +85,13 @@ std\+::string \mbox{\hyperlink{classServidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{
 \mbox{\Hypertarget{classServidor_a0d9ff033a10e411a79603736d3692b7e}\label{classServidor_a0d9ff033a10e411a79603736d3692b7e}} 
 std\+::vector$<$ \mbox{\hyperlink{classCanal}{Canal}} $>$ \mbox{\hyperlink{classServidor_a0d9ff033a10e411a79603736d3692b7e}{canais}}
 \begin{DoxyCompactList}\small\item\em Armazena os canais cadastrados no servidor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServidor_a6d40a173f1a6bec3c848dcb693fc8ff2}\label{classServidor_a6d40a173f1a6bec3c848dcb693fc8ff2}} 
+std\+::vector$<$ \mbox{\hyperlink{classCanalVoz}{Canal\+Voz}} $>$ \mbox{\hyperlink{classServidor_a6d40a173f1a6bec3c848dcb693fc8ff2}{canais\+Voz}}
+\begin{DoxyCompactList}\small\item\em Armazena os canais de voz cadastrados no servidor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServidor_a7861f03269e520a74f481a7e3a42f712}\label{classServidor_a7861f03269e520a74f481a7e3a42f712}} 
+std\+::vector$<$ \mbox{\hyperlink{classCanalTexto}{Canal\+Texto}} $>$ \mbox{\hyperlink{classServidor_a7861f03269e520a74f481a7e3a42f712}{canais\+Texto}}
+\begin{DoxyCompactList}\small\item\em Armazena os canais de texto cadastrados no servidor ~\newline
+ \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classServidor_ac26153c0e4ee691298741be313624ea9}\label{classServidor_ac26153c0e4ee691298741be313624ea9}} 
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classServidor_ac26153c0e4ee691298741be313624ea9}{participantes\+IDs}}
 \begin{DoxyCompactList}\small\item\em Lista de usuarios que já estão no servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -96,6 +125,66 @@ Construtor com atributos de servidor.
 
 
 \doxysubsection{Funções membros}
+\mbox{\Hypertarget{classServidor_a81eb6737b987b7ca8eac10ffa2060aa8}\label{classServidor_a81eb6737b987b7ca8eac10ffa2060aa8}} 
+\index{Servidor@{Servidor}!addCanalTexto@{addCanalTexto}}
+\index{addCanalTexto@{addCanalTexto}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{addCanalTexto()}{addCanalTexto()}}
+{\footnotesize\ttfamily void Servidor\+::add\+Canal\+Texto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCanalTexto}{Canal\+Texto}}}]{canal }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona um canal de texto na lista de canais do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canal} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a8c447eb1393a5b50938988e08b8e0558}\label{classServidor_a8c447eb1393a5b50938988e08b8e0558}} 
+\index{Servidor@{Servidor}!addCanalVoz@{addCanalVoz}}
+\index{addCanalVoz@{addCanalVoz}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{addCanalVoz()}{addCanalVoz()}}
+{\footnotesize\ttfamily void Servidor\+::add\+Canal\+Voz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCanalVoz}{Canal\+Voz}}}]{canal }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona um canal de voz na lista de canais do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canal} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a54b33e338390503a86283016c3a3c091}\label{classServidor_a54b33e338390503a86283016c3a3c091}} 
+\index{Servidor@{Servidor}!addMensagens\_t@{addMensagens\_t}}
+\index{addMensagens\_t@{addMensagens\_t}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{addMensagens\_t()}{addMensagens\_t()}}
+{\footnotesize\ttfamily void Servidor\+::add\+Mensagens\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMensagem}{Mensagem}}}]{mensagem,  }\item[{std\+::string}]{atual }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona mensagens a um canal de texto do servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mensagem} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a51b5a60d2adb3a696f0581e0a3f4f315}\label{classServidor_a51b5a60d2adb3a696f0581e0a3f4f315}} 
+\index{Servidor@{Servidor}!addMensagens\_v@{addMensagens\_v}}
+\index{addMensagens\_v@{addMensagens\_v}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{addMensagens\_v()}{addMensagens\_v()}}
+{\footnotesize\ttfamily void Servidor\+::add\+Mensagens\+\_\+v (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMensagem}{Mensagem}}}]{mensagem,  }\item[{std\+::string}]{atual }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona mensagens a um canal de vozdo servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em mensagem} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classServidor_a675cf834a519ae1f6fb05d9ea4a2ea5d}\label{classServidor_a675cf834a519ae1f6fb05d9ea4a2ea5d}} 
 \index{Servidor@{Servidor}!addParticipantesIDs@{addParticipantesIDs}}
 \index{addParticipantesIDs@{addParticipantesIDs}!Servidor@{Servidor}}
@@ -123,6 +212,71 @@ Função que retorna os canais de um servidor.
 
 \begin{DoxyReturn}{Retorna}
 std\+::vector$<$\+Canal$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_a5e7e99196239f4cd9f22874f73c0c432}\label{classServidor_a5e7e99196239f4cd9f22874f73c0c432}} 
+\index{Servidor@{Servidor}!getCanaisSize@{getCanaisSize}}
+\index{getCanaisSize@{getCanaisSize}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getCanaisSize()}{getCanaisSize()}}
+{\footnotesize\ttfamily int Servidor\+::get\+Canais\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de canais de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_a89889cd25f86948e2c68f2df7d6abb07}\label{classServidor_a89889cd25f86948e2c68f2df7d6abb07}} 
+\index{Servidor@{Servidor}!getCanaisTexto@{getCanaisTexto}}
+\index{getCanaisTexto@{getCanaisTexto}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getCanaisTexto()}{getCanaisTexto()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCanalTexto}{Canal\+Texto}} $>$ Servidor\+::get\+Canais\+Texto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna os canais de texto de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+Canal\+Texto$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_aec28f887db5acdf574bb36d31e478187}\label{classServidor_aec28f887db5acdf574bb36d31e478187}} 
+\index{Servidor@{Servidor}!getCanaisTextoSize@{getCanaisTextoSize}}
+\index{getCanaisTextoSize@{getCanaisTextoSize}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getCanaisTextoSize()}{getCanaisTextoSize()}}
+{\footnotesize\ttfamily int Servidor\+::get\+Canais\+Texto\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de canais de texto de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_a8eae1b98f4cde161df16c90196bfab93}\label{classServidor_a8eae1b98f4cde161df16c90196bfab93}} 
+\index{Servidor@{Servidor}!getCanaisVoz@{getCanaisVoz}}
+\index{getCanaisVoz@{getCanaisVoz}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getCanaisVoz()}{getCanaisVoz()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCanalVoz}{Canal\+Voz}} $>$ Servidor\+::get\+Canais\+Voz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna os canais de voz de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+Canal\+Voz$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_aaee4cbb43adf92afaf0ff2f73c88169a}\label{classServidor_aaee4cbb43adf92afaf0ff2f73c88169a}} 
+\index{Servidor@{Servidor}!getCanaisVozSize@{getCanaisVozSize}}
+\index{getCanaisVozSize@{getCanaisVozSize}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getCanaisVozSize()}{getCanaisVozSize()}}
+{\footnotesize\ttfamily int Servidor\+::get\+Canais\+Voz\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de canais de voz de um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+int 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classServidor_a246c9e826a657e9448cac0ed85206f30}\label{classServidor_a246c9e826a657e9448cac0ed85206f30}} 
 \index{Servidor@{Servidor}!getCodigoConvite@{getCodigoConvite}}
@@ -215,6 +369,36 @@ Função que define os canais de um servidor.
 
 \begin{DoxyParams}{Parâmetros}
 {\em canais} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_aaed21ddc01165e9180ebc1cf61ca5e1b}\label{classServidor_aaed21ddc01165e9180ebc1cf61ca5e1b}} 
+\index{Servidor@{Servidor}!setCanaisTexto@{setCanaisTexto}}
+\index{setCanaisTexto@{setCanaisTexto}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setCanaisTexto()}{setCanaisTexto()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Canais\+Texto (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classCanalTexto}{Canal\+Texto}} $>$}]{canais\+Texto }\end{DoxyParamCaption})}
+
+
+
+Função que define os canais de texto de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canais\+Texto} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServidor_a0c1133b923131e7860c4b0129b571d8c}\label{classServidor_a0c1133b923131e7860c4b0129b571d8c}} 
+\index{Servidor@{Servidor}!setCanaisVoz@{setCanaisVoz}}
+\index{setCanaisVoz@{setCanaisVoz}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{setCanaisVoz()}{setCanaisVoz()}}
+{\footnotesize\ttfamily void Servidor\+::set\+Canais\+Voz (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classCanalVoz}{Canal\+Voz}} $>$}]{canais\+Voz }\end{DoxyParamCaption})}
+
+
+
+Função que define os canais de voz de um servidor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em canais\+Voz} & \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classServidor_a54f4816fb3fc642d398705fc771bef3a}\label{classServidor_a54f4816fb3fc642d398705fc771bef3a}} 
