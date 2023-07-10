@@ -26,6 +26,7 @@ Executor::Executor(Sistema *sistema){
  */
 void Executor::iniciar(){
     while(this->sair != true){
+        
         std::string linha;
         std::getline(std::cin, linha);
         std::cout << LeituraComandos(linha, sistema) << std::endl;

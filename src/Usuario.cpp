@@ -29,6 +29,7 @@ Usuario::Usuario(){
  * @param nome 
  */
 Usuario::Usuario(int id, std::string email, std::string senha, std::string nome){
+    this->id = id;
     this->nome = nome;
     this->email = email;
     this->senha = senha;

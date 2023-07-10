@@ -18,6 +18,7 @@
 #include "Usuario.h"
 #include "Mensagem.h"
 #include "Servidor.h"
+#include <fstream>
 
 
 /**
@@ -32,12 +33,23 @@ private:
     int usuarioLogadoId = -1; //!< Armazena o id do usuário logado no sistema
     std::string servidorAtual;  //!< Armazena o nome do servidor em que o usuário está
     std::string canalAtual; //!< Armazena o nome do servidor em que o usuário está
-    int id = 0; //!< Armazena o valor do último id gerado no sistema
+    int id; //!< Armazena o valor do último id gerado no sistema
+    
+    void salvarUsuarios();
+    void salvarServidores();
+
+    void carregarUsuarios();
+    void carregarServidores();
+
 public:
     void increaseId();
     int getId();
+    void setId(int id);
     int getusuarios();
     int getServidores();
+
+    void salvar();
+    void carregar();
     
     std::string getUsuario(int idUsuario);
     std::string verify_login(int usuarioLogadoId);
