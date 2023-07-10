@@ -82,9 +82,10 @@ void Sistema::salvarUsuarios(){
     arquivo << getusuarios() << "\n";
     for(int i = 0; i < getusuarios(); i++){
         arquivo << usuarios[i].getId() << "\n";
+        arquivo << usuarios[i].getNome() << "\n";
         arquivo << usuarios[i].getEmail() << "\n";
         arquivo << usuarios[i].getSenha() << "\n";
-        arquivo << usuarios[i].getNome() << "\n";
+        
     }
     arquivo.close();
 }
@@ -147,9 +148,10 @@ void Sistema::carregarUsuarios(){
     std::string nome, email, senha;
     while(arquivo >> id){
         arquivo.ignore();
+        std::getline(arquivo, nome);
         std::getline(arquivo, email);
         std::getline(arquivo, senha);
-        std::getline(arquivo, nome);
+        
         Usuario usuario(id, email, senha, nome);
         usuarios.push_back(usuario);
         setId(id);

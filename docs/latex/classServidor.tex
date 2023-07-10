@@ -17,7 +17,7 @@ Classe que representa um servidor do sistema.
 \begin{DoxyCompactList}\small\item\em Construtor vazio de servidor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classServidor_a351e4e2f88fc744ca61e3d2c58534b06}{Servidor}} (int usuario\+Dono\+Id, std\+::string \mbox{\hyperlink{classServidor_a1141e0835dfba56f4d01f922d2a8b34f}{nome}}, std\+::string \mbox{\hyperlink{classServidor_a61fecd2b3435d7048d793741c5f3bfdf}{descricao}}, std\+::string \mbox{\hyperlink{classServidor_a7448f419ead42bf7f0bd42d5bdc53ec6}{codigo\+Convite}})
 \begin{DoxyCompactList}\small\item\em Construtor com atributos de servidor. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classServidor_abc78d331b71facbcda20065f8dcca37e}{getparticpantes}} ()
+int \mbox{\hyperlink{classServidor_ac320b5dfdf3867976932bf898c4b8210}{getparticipantes}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de participantes em um servidor. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classServidor_ac9bd9b0e9ec6a1cf884f8b0ba36e76b8}{get\+Dono\+ID}} ()
 \begin{DoxyCompactList}\small\item\em Função que o id do dono de um servidor. \end{DoxyCompactList}\item 
@@ -330,6 +330,19 @@ Função que retorna o nome do servidor.
 \begin{DoxyReturn}{Retorna}
 std\+::string 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classServidor_ac320b5dfdf3867976932bf898c4b8210}\label{classServidor_ac320b5dfdf3867976932bf898c4b8210}} 
+\index{Servidor@{Servidor}!getparticipantes@{getparticipantes}}
+\index{getparticipantes@{getparticipantes}!Servidor@{Servidor}}
+\doxysubsubsection{\texorpdfstring{getparticipantes()}{getparticipantes()}}
+{\footnotesize\ttfamily int Servidor\+::getparticipantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a quantidade de participantes em um servidor. 
+
+\begin{DoxyReturn}{Retorna}
+int 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classServidor_a5583662547b3e58683dd4382bb2276c0}\label{classServidor_a5583662547b3e58683dd4382bb2276c0}} 
 \index{Servidor@{Servidor}!getParticipantesIDs@{getParticipantesIDs}}
 \index{getParticipantesIDs@{getParticipantesIDs}!Servidor@{Servidor}}
@@ -342,19 +355,6 @@ Função que retorna os ids dos participantes de um servidor.
 
 \begin{DoxyReturn}{Retorna}
 std\+::vector$<$int$>$ 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classServidor_abc78d331b71facbcda20065f8dcca37e}\label{classServidor_abc78d331b71facbcda20065f8dcca37e}} 
-\index{Servidor@{Servidor}!getparticpantes@{getparticpantes}}
-\index{getparticpantes@{getparticpantes}!Servidor@{Servidor}}
-\doxysubsubsection{\texorpdfstring{getparticpantes()}{getparticpantes()}}
-{\footnotesize\ttfamily int Servidor\+::getparticpantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Função que retorna a quantidade de participantes em um servidor. 
-
-\begin{DoxyReturn}{Retorna}
-int 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classServidor_aed1337a3f669f526ab745bbb7b26986d}\label{classServidor_aed1337a3f669f526ab745bbb7b26986d}} 
 \index{Servidor@{Servidor}!setCanais@{setCanais}}

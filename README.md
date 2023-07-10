@@ -10,7 +10,7 @@
 
 # Descrição do Projeto
 
-O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de programação C++ no desenvolvimento de um sistema de comunidades, denominado Concordo, com recursos similares ao Discord.
+O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de programação C++ no desenvolvimento de um sistema de comunidades, servidores e canais, denominado Concordo, com recursos similares ao aplicativo Discord.
 
 # Roteiro de Entradas e Saídas
 
@@ -39,13 +39,25 @@ enter-server <nome> <código>
 
 list-participants
 
+list-channels
+
+create-channel <nome> <tipo>
+
+enter-channel <nome>
+
+leave-channel
+
+send-message <mensagem>
+
+list-messages
+
 ```
-
-Essas são as possibilidades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades da parte 1:
-
 Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.
 
 Note que outputs estão caracterizados a seguir com o símbolo ">" apenas para facilitar a compreensão das entradas e saídas, no terminal não possui esse símbolo antes de cada saída.
+
+Essas são as possibilidades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades da parte 1:
+
 ```
 create-user marc@gmail senha1234 
 >Dados inválidos.
@@ -212,9 +224,7 @@ disconnect
 >Desconectado com sucesso!
 quit
 >Saindo do Concordo...
-
 ./Concordo
-
 login marc@gmail senha1234
 >Logado como marc@gmail!
 list-servers
@@ -244,8 +254,6 @@ quit
 
 ```
 
-
-
 # Acesso ao Projeto e Compilação
 
 É possível acessar o repositório do projeto no Github ou baixá-lo.
@@ -270,4 +278,4 @@ E para executar o programa
 
 # Pessoas Desenvolvedoras do Projeto
 
-Esse projeto foi desenvolvido pela aluna Raquel da Costa Freire, discente curso de graduação Tecnologia da Informação na UFRN no semestre 2023.1, por meio da disciplina Linguagem de Programação 1.
+Esse projeto foi desenvolvido pela aluna Raquel da Costa Freire, discente do curso de graduação Tecnologia da Informação na UFRN no semestre 2023.1, por meio da disciplina Linguagem de Programação 1.

@@ -7,7 +7,7 @@
 \item \href{\#acesso-ao-projeto-e-compila\%C3\%A7\%C3\%A3o}{\texttt{ Acesso ao Projeto e Compilação}}
 \item \href{\#pessoas-desenvolvedoras-do-projeto}{\texttt{ Pessoas Desenvolvedoras do Projeto}}
 \end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysection{Descrição do Projeto}\label{md_README_autotoc_md7}
-O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de programação C++ no desenvolvimento de um sistema de comunidades, denominado Concordo, com recursos similares ao Discord.\hypertarget{md_README_autotoc_md8}{}\doxysection{Roteiro de Entradas e Saídas}\label{md_README_autotoc_md8}
+O intuito deste projeto é aplicar o conhecimento adquirido na linguagem de programação C++ no desenvolvimento de um sistema de comunidades, servidores e canais, denominado Concordo, com recursos similares ao aplicativo Discord.\hypertarget{md_README_autotoc_md8}{}\doxysection{Roteiro de Entradas e Saídas}\label{md_README_autotoc_md8}
 O sistema pode receber os seguintes comandos\+:
 
 
@@ -33,15 +33,27 @@ O sistema pode receber os seguintes comandos\+:
 \DoxyCodeLine{enter-\/server <nome> <código>}
 \DoxyCodeLine{}
 \DoxyCodeLine{list-\/participants}
+\DoxyCodeLine{}
+\DoxyCodeLine{list-\/channels}
+\DoxyCodeLine{}
+\DoxyCodeLine{create-\/channel <nome> <tipo>}
+\DoxyCodeLine{}
+\DoxyCodeLine{enter-\/channel <nome>}
+\DoxyCodeLine{}
+\DoxyCodeLine{leave-\/channel}
+\DoxyCodeLine{}
+\DoxyCodeLine{send-\/message <mensagem>}
+\DoxyCodeLine{}
+\DoxyCodeLine{list-\/messages}
 
 \end{DoxyCode}
+ Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.
 
+Note que outputs estão caracterizados a seguir com o símbolo \char`\"{}$>$\char`\"{} apenas para facilitar a compreensão das entradas e saídas, no terminal não possui esse símbolo antes de cada saída.
 
 Essas são as possibilidades de entrada para o programa, de maneira a serem testadas as suas diversas funcionalidades da parte 1\+:
 
-Lembre que senhas e emails não podem conter espaço, bem como nome de servidores e canais. Nome de usuário pode ter espaço.
 
-Note que outputs estão caracterizados a seguir com o símbolo \char`\"{}$>$\char`\"{} apenas para facilitar a compreensão das entradas e saídas, no terminal não possui esse símbolo antes de cada saída. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{create-\/user marc@gmail senha1234 }
 \DoxyCodeLine{>Dados inválidos.}
@@ -167,6 +179,81 @@ Note que quando a mensagem é mostrada, a parte de data e hora está de maneira 
 \DoxyCodeLine{>Saindo do Concordo...}
 
 \end{DoxyCode}
+
+
+A seguir estão as possibilidades do programa para testar as funcionalidades da parte 3\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{create-\/user raquel@gmail senha123 raquel freire}
+\DoxyCodeLine{>Usuário criado com sucesso!}
+\DoxyCodeLine{create-\/user marc@gmail senha1234 Marcos B}
+\DoxyCodeLine{>Usuário criado com sucesso!}
+\DoxyCodeLine{login raquel@gmail senha123}
+\DoxyCodeLine{>Logado como raquel@gmail!}
+\DoxyCodeLine{create-\/server spa}
+\DoxyCodeLine{>Servidor criado com sucesso!}
+\DoxyCodeLine{create-\/server deus}
+\DoxyCodeLine{>Servidor criado com sucesso!}
+\DoxyCodeLine{set-\/server-\/desc deus amem}
+\DoxyCodeLine{>Descrição adicionada com sucesso!}
+\DoxyCodeLine{set-\/server-\/invite-\/code deus bora}
+\DoxyCodeLine{>Código de convite adicionado com sucesso!}
+\DoxyCodeLine{set-\/server-\/desc spa vamo??}
+\DoxyCodeLine{>Descrição adicionada com sucesso!}
+\DoxyCodeLine{create-\/channel jogos voz}
+\DoxyCodeLine{>Canal de voz criado com sucesso!}
+\DoxyCodeLine{create-\/channel cafezinho texto}
+\DoxyCodeLine{>Canal de texto criado com sucesso!}
+\DoxyCodeLine{enter-\/channel jogos}
+\DoxyCodeLine{>Entrou no canal com sucesso!}
+\DoxyCodeLine{send-\/message vamo jogar agora ou mais tarde??}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{leave-\/channel}
+\DoxyCodeLine{>Saindo do canal...}
+\DoxyCodeLine{enter-\/channel cafezinho}
+\DoxyCodeLine{>Entrou no canal com sucesso!}
+\DoxyCodeLine{send-\/message caramba, boy}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{send-\/message que ódio desse cara}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{send-\/message amei as fofocas de hoje}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{leave-\/channel}
+\DoxyCodeLine{>Saindo do Canal...}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{>Desconectado com sucesso!}
+\DoxyCodeLine{quit}
+\DoxyCodeLine{>Saindo do Concordo...}
+\DoxyCodeLine{./Concordo}
+\DoxyCodeLine{login marc@gmail senha1234}
+\DoxyCodeLine{>Logado como marc@gmail!}
+\DoxyCodeLine{list-\/servers}
+\DoxyCodeLine{>spa}
+\DoxyCodeLine{>deus}
+\DoxyCodeLine{enter-\/server deus bora}
+\DoxyCodeLine{>Entrou no servidor com sucesso!}
+\DoxyCodeLine{enter-\/channel cafezinho}
+\DoxyCodeLine{>Entrou no canal com sucesso!}
+\DoxyCodeLine{list-\/messages}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: caramba, boy}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: que ódio desse cara}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: amei as fofocas de hoje}
+\DoxyCodeLine{send-\/message também adoreeei}
+\DoxyCodeLine{>Mensagem enviada com sucesso!}
+\DoxyCodeLine{list-\/messages}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: caramba, boy}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: que ódio desse cara}
+\DoxyCodeLine{>raquel freire<dia/mês/ano -\/ horas:minutos:segundos>: amei as fofocas de hoje}
+\DoxyCodeLine{>Marcos B<dia/mês/ano -\/ horas:minutos:segundos>: também adoreeei}
+\DoxyCodeLine{leave-\/channel}
+\DoxyCodeLine{>Saindo do Canal...}
+\DoxyCodeLine{disconnect}
+\DoxyCodeLine{>Desconectado com sucesso!}
+\DoxyCodeLine{quit}
+\DoxyCodeLine{>Saindo do Concordo...}
+
+\end{DoxyCode}
 \hypertarget{md_README_autotoc_md9}{}\doxysection{Acesso ao Projeto e Compilação}\label{md_README_autotoc_md9}
 É possível acessar o repositório do projeto no Github ou baixá-\/lo.
 
@@ -190,4 +277,4 @@ Dentro da pasta do projeto, para criar e entrar na pasta build, digite o comando
 
 \end{DoxyCode}
 \hypertarget{md_README_autotoc_md10}{}\doxysection{Pessoas Desenvolvedoras do Projeto}\label{md_README_autotoc_md10}
-Esse projeto foi desenvolvido pela aluna Raquel da Costa Freire, discente curso de graduação Tecnologia da Informação na UFRN no semestre 2023.\+1, por meio da disciplina Linguagem de Programação 1. 
+Esse projeto foi desenvolvido pela aluna Raquel da Costa Freire, discente do curso de graduação Tecnologia da Informação na UFRN no semestre 2023.\+1, por meio da disciplina Linguagem de Programação 1. 
