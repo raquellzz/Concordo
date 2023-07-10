@@ -13,10 +13,13 @@ var searchData=
   ['canalvoz_16',['CanalVoz',['../classCanalVoz.html',1,'CanalVoz'],['../classCanalVoz.html#af08207ca2ac3ed46b8bdb812c501099a',1,'CanalVoz::CanalVoz()']]],
   ['canalvoz_2ecpp_17',['CanalVoz.cpp',['../CanalVoz_8cpp.html',1,'']]],
   ['canalvoz_2eh_18',['CanalVoz.h',['../CanalVoz_8h.html',1,'']]],
-  ['codigoconvite_19',['codigoConvite',['../classServidor.html#a7448f419ead42bf7f0bd42d5bdc53ec6',1,'Servidor']]],
-  ['concordo_2ecpp_20',['Concordo.cpp',['../Concordo_8cpp.html',1,'']]],
-  ['conteudo_21',['conteudo',['../classMensagem.html#a97184a35f33bca1c7a1bf6832f1caaec',1,'Mensagem']]],
-  ['create_5fchannel_22',['create_channel',['../classSistema.html#a9aff0a4b6c00f8c3e4609c1751a96459',1,'Sistema']]],
-  ['create_5fserver_23',['create_server',['../classSistema.html#a4e7bddb2218e9e48afc51777dd947433',1,'Sistema']]],
-  ['create_5fuser_24',['create_user',['../classSistema.html#a4e5c2253accc97e4310a5a2ad7b4354a',1,'Sistema']]]
+  ['carregar_19',['carregar',['../classSistema.html#a811a732f691bb1d231ce11458dd42539',1,'Sistema']]],
+  ['carregarservidores_20',['carregarServidores',['../classSistema.html#aa74c5118001598df07380cf2a05f236e',1,'Sistema']]],
+  ['carregarusuarios_21',['carregarUsuarios',['../classSistema.html#aa3a447f5b25990c54a913124d3bb59dc',1,'Sistema']]],
+  ['codigoconvite_22',['codigoConvite',['../classServidor.html#a7448f419ead42bf7f0bd42d5bdc53ec6',1,'Servidor']]],
+  ['concordo_2ecpp_23',['Concordo.cpp',['../Concordo_8cpp.html',1,'']]],
+  ['conteudo_24',['conteudo',['../classMensagem.html#a97184a35f33bca1c7a1bf6832f1caaec',1,'Mensagem']]],
+  ['create_5fchannel_25',['create_channel',['../classSistema.html#a9aff0a4b6c00f8c3e4609c1751a96459',1,'Sistema']]],
+  ['create_5fserver_26',['create_server',['../classSistema.html#a4e7bddb2218e9e48afc51777dd947433',1,'Sistema']]],
+  ['create_5fuser_27',['create_user',['../classSistema.html#a4e5c2253accc97e4310a5a2ad7b4354a',1,'Sistema']]]
 ];

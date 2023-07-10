@@ -50,6 +50,7 @@ digraph "src/Concordo.cpp"
   Node12 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node13 [label="Executor.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Executor_8h.html",tooltip="Definição da classe Executor."];
   Node13 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

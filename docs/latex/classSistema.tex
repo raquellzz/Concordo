@@ -17,10 +17,19 @@ void \mbox{\hyperlink{classSistema_a36023b108cd2f35cabb0e0b311c2fcc7}{increase\+
 \begin{DoxyCompactList}\small\item\em Função para aumentar o último id. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSistema_a04a62d41542322a457212ba1901fca7f}{get\+Id}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna o último id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSistema_a6919662f572a0551548e6360c54de053}\label{classSistema_a6919662f572a0551548e6360c54de053}} 
+void \mbox{\hyperlink{classSistema_a6919662f572a0551548e6360c54de053}{set\+Id}} (int \mbox{\hyperlink{classSistema_a69ba5e2cce55afc2a47d899a1100a42a}{id}})
+\begin{DoxyCompactList}\small\item\em Função que define o último id do sistema. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSistema_a760b2bb950136842675dc78551b6c60e}{getusuarios}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de usuários cadastrados. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classSistema_a841b2da930cbc8f7c67a12a610343f96}{get\+Servidores}} ()
 \begin{DoxyCompactList}\small\item\em Função que retorna a quantidade de servidores criados. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSistema_a118d16dc0bcefb5bbe29bdfd471def2c}\label{classSistema_a118d16dc0bcefb5bbe29bdfd471def2c}} 
+void \mbox{\hyperlink{classSistema_a118d16dc0bcefb5bbe29bdfd471def2c}{salvar}} ()
+\begin{DoxyCompactList}\small\item\em Função que salva os dados do sistema em arquivos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSistema_a811a732f691bb1d231ce11458dd42539}\label{classSistema_a811a732f691bb1d231ce11458dd42539}} 
+void \mbox{\hyperlink{classSistema_a811a732f691bb1d231ce11458dd42539}{carregar}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega os dados do sistema de arquivos. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSistema_af39f532f4d183a7bb7c05286de49957f}{get\+Usuario}} (int id\+Usuario)
 \begin{DoxyCompactList}\small\item\em Função que retorna o nome do usuário. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSistema_a7630523e29e3824fe10e295ea777c5c5}{verify\+\_\+login}} (int \mbox{\hyperlink{classSistema_ad911bf2bc2c60b551f00a99abc5aa318}{usuario\+Logado\+Id}})
@@ -61,6 +70,21 @@ std\+::string \mbox{\hyperlink{classSistema_a77a2cfb2d5d3407d9dcefb344f3ffc67}{s
 \begin{DoxyCompactList}\small\item\em Função que representa o comando para enviar uma mensagem no canal atual. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSistema_a70a279885f5b5ad6a6f50b4a682b46d9}{list\+\_\+messages}} ()
 \begin{DoxyCompactList}\small\item\em Função que representa o comando para listar as mensagens do canal atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSistema_a817ea823866d39461d33070b767fc8e6}\label{classSistema_a817ea823866d39461d33070b767fc8e6}} 
+void \mbox{\hyperlink{classSistema_a817ea823866d39461d33070b767fc8e6}{salvar\+Usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Função que salva os dados dos usuários em um arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSistema_a2c089769cc448b35ef28af4fc1edc8d6}\label{classSistema_a2c089769cc448b35ef28af4fc1edc8d6}} 
+void \mbox{\hyperlink{classSistema_a2c089769cc448b35ef28af4fc1edc8d6}{salvar\+Servidores}} ()
+\begin{DoxyCompactList}\small\item\em Função que salva os dados dos servidores em um arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSistema_aa3a447f5b25990c54a913124d3bb59dc}\label{classSistema_aa3a447f5b25990c54a913124d3bb59dc}} 
+void \mbox{\hyperlink{classSistema_aa3a447f5b25990c54a913124d3bb59dc}{carregar\+Usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega os dados dos usuários de um arquivo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSistema_aa74c5118001598df07380cf2a05f236e}\label{classSistema_aa74c5118001598df07380cf2a05f236e}} 
+void \mbox{\hyperlink{classSistema_aa74c5118001598df07380cf2a05f236e}{carregar\+Servidores}} ()
+\begin{DoxyCompactList}\small\item\em Função que carrega os dados dos servidores de um arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,7 +107,7 @@ std\+::string \mbox{\hyperlink{classSistema_ab93166ac31ac9616cdb6e232bd474805}{s
 std\+::string \mbox{\hyperlink{classSistema_afe6451891d0dee5461924c629f4547e5}{canal\+Atual}}
 \begin{DoxyCompactList}\small\item\em Armazena o nome do servidor em que o usuário está \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSistema_a69ba5e2cce55afc2a47d899a1100a42a}\label{classSistema_a69ba5e2cce55afc2a47d899a1100a42a}} 
-int \mbox{\hyperlink{classSistema_a69ba5e2cce55afc2a47d899a1100a42a}{id}} = 0
+int \mbox{\hyperlink{classSistema_a69ba5e2cce55afc2a47d899a1100a42a}{id}}
 \begin{DoxyCompactList}\small\item\em Armazena o valor do último id gerado no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
