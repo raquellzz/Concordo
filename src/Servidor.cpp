@@ -45,7 +45,7 @@ Servidor::Servidor(int usuarioDonoId, std::string nome, std::string descricao, s
  * 
  * @return int 
  */
-int Servidor::getparticpantes(){
+int Servidor::getparticipantes(){
     return this->participantesIDs.size();
 }
 

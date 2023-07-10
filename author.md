@@ -46,18 +46,18 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 **C1 - Implementar Persistência dos dados em disco**
 
 *Métodos privados*
-- [] `void salvarUsuarios()`
-- [] `void salvarServidores()`
+- [x] `void salvarUsuarios()`
+- [x] `void salvarServidores()`
 *Método público*
-- [] `void salvar()`
+- [x] `void salvar()`
 
 **C2 - Implementar restauração dos dados do disco na inicialização do sistema**
 
 *Métodos privados*
-- [] `void carregarUsuarios()`
-- [] `void carregarServidores()`
+- [x] `void carregarUsuarios()`
+- [x] `void carregarServidores()`
 *Método público*
-- [] `void carregar()`
+- [x] `void carregar()`
 
 
 

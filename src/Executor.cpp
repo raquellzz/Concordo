@@ -25,6 +25,7 @@ Executor::Executor(Sistema *sistema){
  * 
  */
 void Executor::iniciar(){
+    sistema->carregar();
     while(this->sair != true){
         
         std::string linha;

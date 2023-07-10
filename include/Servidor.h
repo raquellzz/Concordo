@@ -39,7 +39,7 @@ public:
     Servidor(int usuarioDonoId, std::string nome, std::string descricao, std::string codigoConvite);
 
 //gets
-    int getparticpantes();
+    int getparticipantes();
     int getDonoID();
     int getCanaisSize();
     int getCanaisVozSize();

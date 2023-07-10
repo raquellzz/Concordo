@@ -169,6 +169,83 @@ quit
 >Saindo do Concordo...
 ```
 
+A seguir estão as possibilidades do programa para testar as funcionalidades da parte 3:
+
+```
+create-user raquel@gmail senha123 raquel freire
+>Usuário criado com sucesso!
+create-user marc@gmail senha1234 Marcos B
+>Usuário criado com sucesso!
+login raquel@gmail senha123
+>Logado como raquel@gmail!
+create-server spa
+>Servidor criado com sucesso!
+create-server deus
+>Servidor criado com sucesso!
+set-server-desc deus amem
+>Descrição adicionada com sucesso!
+set-server-invite-code deus bora
+>Código de convite adicionado com sucesso!
+set-server-desc spa vamo??
+>Descrição adicionada com sucesso!
+create-channel jogos voz
+>Canal de voz criado com sucesso!
+create-channel cafezinho texto
+>Canal de texto criado com sucesso!
+enter-channel jogos
+>Entrou no canal com sucesso!
+send-message vamo jogar agora ou mais tarde??
+>Mensagem enviada com sucesso!
+leave-channel
+>Saindo do canal...
+enter-channel cafezinho
+>Entrou no canal com sucesso!
+send-message caramba, boy
+>Mensagem enviada com sucesso!
+send-message que ódio desse cara
+>Mensagem enviada com sucesso!
+send-message amei as fofocas de hoje
+>Mensagem enviada com sucesso!
+leave-channel
+>Saindo do Canal...
+disconnect
+>Desconectado com sucesso!
+quit
+>Saindo do Concordo...
+
+./Concordo
+
+login marc@gmail senha1234
+>Logado como marc@gmail!
+list-servers
+>spa
+>deus
+enter-server deus bora
+>Entrou no servidor com sucesso!
+enter-channel cafezinho
+>Entrou no canal com sucesso!
+list-messages
+>raquel freire<dia/mês/ano - horas:minutos:segundos>: caramba, boy
+>raquel freire<dia/mês/ano - horas:minutos:segundos>: que ódio desse cara
+>raquel freire<dia/mês/ano - horas:minutos:segundos>: amei as fofocas de hoje
+send-message também adoreeei
+>Mensagem enviada com sucesso!
+list-messages
+>raquel freire<dia/mês/ano - horas:minutos:segundos>: caramba, boy
+>raquel freire<dia/mês/ano - horas:minutos:segundos>: que ódio desse cara
+>raquel freire<dia/mês/ano - horas:minutos:segundos>: amei as fofocas de hoje
+>Marcos B<dia/mês/ano - horas:minutos:segundos>: também adoreeei
+leave-channel
+>Saindo do Canal...
+disconnect
+>Desconectado com sucesso!
+quit
+>Saindo do Concordo...
+
+```
+
+
+
 # Acesso ao Projeto e Compilação
 
 É possível acessar o repositório do projeto no Github ou baixá-lo.

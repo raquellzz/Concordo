@@ -102,11 +102,12 @@ void Sistema::salvarServidores(){
         arquivo << servidores[i].getNome() << "\n";
         arquivo << servidores[i].getDescricao() << "\n";
         arquivo << servidores[i].getCodigoConvite() << "\n";
-        arquivo << servidores[i].getparticpantes() << "\n";
-        for(int j = 0; j < servidores[i].getparticpantes(); j++){
+        arquivo << servidores[i].getparticipantes() << "\n";
+        for(int j = 0; j < servidores[i].getparticipantes(); j++){
             arquivo << servidores[i].getParticipantesIDs()[j] << "\n";
         }
-        arquivo << servidores[i].getCanaisSize() << "\n";
+        int canais = servidores[i].getCanaisTextoSize() + servidores[i].getCanaisVozSize();
+        arquivo << canais << "\n";
         for(int j = 0; j < servidores[i].getCanaisTextoSize(); j++){
             arquivo << servidores[i].getCanaisTexto()[j].getNome() << "\n";
             arquivo << servidores[i].getCanaisTexto()[j].getTipo() << "\n";
@@ -151,6 +152,7 @@ void Sistema::carregarUsuarios(){
         std::getline(arquivo, nome);
         Usuario usuario(id, email, senha, nome);
         usuarios.push_back(usuario);
+        setId(id);
     }
     arquivo.close();
 }
@@ -177,50 +179,50 @@ void Sistema::carregarServidores(){
         std::getline(arquivo, codigoConvite);
         arquivo >> particpantes;
         arquivo.ignore();
+        Servidor novoServidor(donoID, nome, descricao, codigoConvite);
         std::vector<int> participantesIDs;
         for(int i = 0; i < particpantes; i++){
             int id;
             arquivo >> id;
-            participantesIDs.push_back(id);
+            novoServidor.addParticipantesIDs(id);
         }
         arquivo >> canaisSize;
         arquivo.ignore();
-        std::vector<CanalTexto> canaisTexto;
-        std::vector<CanalVoz> canaisVoz;
+        
         for(int i = 0; i < canaisSize; i++){
             std::getline(arquivo, nomeCanal);
             std::getline(arquivo, tipoCanal);
+            arquivo >> mensagensSize;
+            arquivo.ignore();
             if(tipoCanal == "texto"){
-                arquivo >> mensagensSize;
-                arquivo.ignore();
-                std::vector<Mensagem> mensagens;
+                
+                CanalTexto novoCanal(nomeCanal);
                 for(int j = 0; j < mensagensSize; j++){
                     int enviadaPor;
-                    std::getline(arquivo, dataHora);
-                    std::getline(arquivo, conteudo);
                     arquivo >> enviadaPor;
                     arquivo.ignore();
+                    std::getline(arquivo, dataHora);
+                    std::getline(arquivo, conteudo);
+                    
                     Mensagem novaMensagem(enviadaPor, dataHora, conteudo);
-                    mensagens.push_back(novaMensagem);
+                    novoCanal.addMensagem(novaMensagem);
                 }
-                CanalTexto novoCanal(nomeCanal);
-                novoCanal.setMensagens(mensagens);
-                
-                canaisTexto.push_back(novoCanal);
+                novoServidor.addCanalTexto(novoCanal);
             }
-            else{
+            else if(tipoCanal == "voz"){
+                int enviadaPor;
+                arquivo >> enviadaPor;
+                arquivo.ignore();
                 std::getline(arquivo, dataHora);
                 std::getline(arquivo, conteudo);
-                Mensagem ultimaMensagem(0, dataHora, conteudo);
+                Mensagem ultimaMensagem(enviadaPor, dataHora, conteudo);
                 CanalVoz novoCanal(nomeCanal);
                 novoCanal.setUltimaMensagem(ultimaMensagem);
-                canaisVoz.push_back(novoCanal);
+                novoServidor.addCanalVoz(novoCanal);
             }
         }
-        Servidor novoServidor(donoID, nome, descricao, codigoConvite);
-        novoServidor.setCanaisTexto(canaisTexto);
-        novoServidor.setCanaisVoz(canaisVoz);
-        novoServidor.setParticipantesIDs(participantesIDs);
+        
+        
         servidores.push_back(novoServidor);
     }
     arquivo.close();
@@ -263,6 +265,9 @@ std::string Sistema::verify_login(int usuarioLogadoId){
  * @return std::string 
  */
 std::string Sistema::quit(){
+    usuarioLogadoId = -1;
+    servidorAtual = "";
+    canalAtual = "";
     return "Saindo do Concordo...";
 }
 
@@ -345,7 +350,6 @@ std::string Sistema::create_server (std::string nome){
     Servidor novoServidor(usuarioLogadoId, nome, "", "");
     
     servidores.push_back(novoServidor);
-    servidores[getServidores()-1].addParticipantesIDs(usuarioLogadoId);
     servidorAtual = novoServidor.getNome();
     salvar();
     return "Servidor criado com sucesso!";
@@ -448,7 +452,18 @@ std::string Sistema::enter_server(std::string nome, std::string codigo){
     verify_login(usuarioLogadoId);
     for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == nome){
+            if(servidores[i].getDonoID() == usuarioLogadoId){
+                servidorAtual = nome;
+                servidores[i].addParticipantesIDs(usuarioLogadoId);
+                salvar();
+                return "Entrou no servidor com sucesso!";
+            }
             if (servidores[i].getCodigoConvite() == codigo){
+                for(int j = 0; j < servidores[i].getparticipantes(); j++){
+                    if(servidores[i].getParticipantesIDs()[j] == usuarioLogadoId){
+                        return "Você já está no servidor!";
+                    }
+                }
                 servidorAtual = nome;
                 servidores[i].addParticipantesIDs(usuarioLogadoId);
                 salvar();
@@ -483,7 +498,7 @@ std::string Sistema::list_participants(){
     for (int i = 0; i < getServidores(); i++){
         if (servidores[i].getNome() == servidorAtual){
             std::string lista = "";
-            for (int j = 0; j < servidores[i].getparticpantes(); j++){
+            for (int j = 0; j < servidores[i].getparticipantes(); j++){
                 for(int k = 0; k < getusuarios(); k++){
                     if(usuarios[k].getId() == servidores[i].getParticipantesIDs()[j]){
                         if(k == getusuarios() - 1){
@@ -576,6 +591,7 @@ std::string Sistema::enter_channel(std::string nome){
             for(int j = 0; j < servidores[i].getCanaisSize(); j++){
                 if(servidores[i].getCanais()[j].getNome() == nome){
                     canalAtual = nome;
+                    salvar();
                     return "Entrou no canal com sucesso!";
                 }
             }

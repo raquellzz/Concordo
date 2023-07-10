@@ -19,7 +19,6 @@ int main(){
     
     Sistema sistema; //!< Armazena o sistema que será usado
     Executor executor(&sistema); //!< Armazena os dados de um executor em função do sistema
-    sistema.carregar(); //!< Carrega os dados do sistema
     executor.iniciar(); //!< Inicia o programa
     return 0;
 }
